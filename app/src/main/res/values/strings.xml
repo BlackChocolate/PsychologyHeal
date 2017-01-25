@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">知心</string>
+    <string name="logo">logo</string>
+    <string name="login">登录</string>
+    <string name="phone_and_email">手机号/邮箱</string>
+    <string name="passwordChinese">密码</string>
+    <string name="input_your_username">input your username</string>
+    <string name="input_your_password">input your password</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="resetPassword">忘记密码?</string>
+</resources>
