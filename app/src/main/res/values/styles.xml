@@ -1,11 +1,26 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <!-- 隐藏状态栏 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 隐藏标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="tab_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:textColor">@drawable/tab_menu_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

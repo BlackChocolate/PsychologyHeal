@@ -1,5 +1,6 @@
 package com.example.sukurax.psychologyheal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -58,12 +59,18 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void done(AVUser avUser, AVException e) {
                             if(e==null){
-                                Toast.makeText(getApplicationContext(),"登录成功",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent();
+                                intent.setClass(LoginActivity.this,MainActivity.class);
+                                startActivity(intent);
                             }else{
                                 String temp[] = e.toString().split("\"");
                                 Toast.makeText(getApplicationContext(), temp[temp.length-2],
                                         Toast.LENGTH_SHORT).show();
+                                if(temp[temp.length-2]=="登录成功"){
+                                    Intent intent=new Intent();
+                                    intent.setClass(LoginActivity.this,MainActivity.class);
+                                    startActivity(intent);
+                                }
                             }
                         }
                     });

@@ -40,7 +40,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:text="@string/phone_and_email"
+                        android:text="@string/usernameChinese"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
