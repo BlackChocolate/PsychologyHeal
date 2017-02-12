@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#EEEEEE">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -27,6 +27,84 @@
                             android:layout_height="200dp"
                             app:canLoop="true"
                         />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="14dp">
+                                                <ImageView
+                                                    android:layout_width="36dp"
+                                                    android:layout_height="36dp"
+                                                    android:src="@drawable/column"
+                                                    android:layout_weight="0.25"
+                                                    android:id="@+id/column"/>
+                                                <ImageView
+                                                    android:layout_width="36dp"
+                                                    android:layout_height="36dp"
+                                                    android:src="@drawable/article"
+                                                    android:layout_weight="0.25"
+                                                    android:id="@+id/article"/>
+                                                <ImageView
+                                                    android:layout_width="36dp"
+                                                    android:layout_height="36dp"
+                                                    android:src="@drawable/test"
+                                                    android:layout_weight="0.25"
+                                                    android:id="@+id/test"/>
+                                                <ImageView
+                                                    android:layout_width="36dp"
+                                                    android:layout_height="36dp"
+                                                    android:src="@drawable/diary"
+                                                    android:layout_weight="0.25"
+                                                    android:id="@+id/diary"/>
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="12dp"
+                                            >
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.25"
+                                                    android:textSize="16sp"
+                                                    android:gravity="center_horizontal"
+                                                    android:text="@string/column"/>
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_horizontal"
+                                                    android:layout_weight="0.25"
+                                                    android:textSize="16sp"
+                                                    android:text="@string/article"/>
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_horizontal"
+                                                    android:layout_weight="0.25"
+                                                    android:textSize="16sp"
+                                                    android:text="@string/test"/>
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_horizontal"
+                                                    android:layout_weight="0.25"
+                                                    android:textSize="16sp"
+                                                    android:text="@string/diary"/>
+                                        </LinearLayout>
+                                </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+
                         <!--精彩专栏题头-->
                         <LinearLayout
                             android:orientation="horizontal"
@@ -55,135 +133,129 @@
                                     android:textColor="@color/colorAccent"/>
 
                         </LinearLayout>
-                        <!--精彩专栏内容-->
+                        <!--精彩专栏-->
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="248dp">
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+                                <android.support.v7.widget.CardView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
-                                    android:gravity="center_vertical">
-                                        <com.example.sukurax.psychologyheal.XCRoundImageView
-                                            android:id="@+id/brilliantColumnPic"
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:src="@drawable/pictest"
-                                            android:layout_marginLeft="16dp"/>
-
-                                        <TextView
-                                            android:text="zuoyemingzi"
-                                            android:textSize="16sp"
-                                            android:textColor="#000000"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/brilliantColumnName"
-                                            android:layout_marginLeft="16dp"/>
-
-                                        <TextView
-                                            android:text="3小时前"
-                                            android:textSize="16sp"
-                                            android:textColor="#747474"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/brilliantColumnTime"
-                                            android:layout_marginLeft="16dp"/>
-
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="192dp"
-                                    android:gravity="center_vertical">
-
+                                    android:layout_height="wrap_content">
                                         <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="0dp"
-                                            android:layout_weight="0.5"
-                                            android:layout_height="160dp"
-                                            android:layout_marginLeft="16dp"
-                                            >
-                                                <TextView
-                                                    android:text="从一个角度看生活"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                                <!--精彩专栏内容-->
+                                                <LinearLayout
+                                                    android:orientation="vertical"
                                                     android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/brilliantColumnTitle"
-                                                    android:textSize="24sp"
-                                                    android:textColor="#000000"
-                                                    />
+                                                    android:layout_height="wrap_content">
+                                                        <android.support.v7.widget.CardView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"></android.support.v7.widget.CardView>
+                                                        <android.support.v7.widget.CardView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content">
+                                                                <LinearLayout
+                                                                    android:orientation="horizontal"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="192dp"
+                                                                    android:gravity="center_vertical">
 
-                                                <TextView
-                                                    android:text="以填满整个ImageView为目的，将原图的中心对准ImageView的中心，等比例放大原图，直到填满ImageView为止（指的是ImageView的宽和高都要填满），原图超过ImageView的部分作裁剪处理。"
+                                                                        <LinearLayout
+                                                                            android:orientation="vertical"
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_weight="0.5"
+                                                                            android:layout_height="160dp"
+                                                                            android:layout_marginLeft="16dp"
+                                                                            >
+                                                                                <TextView
+                                                                                    android:text="从一个角度看生活"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:id="@+id/brilliantColumnTitle"
+                                                                                    android:textSize="24sp"
+                                                                                    android:textColor="#000000"
+                                                                                    />
+
+                                                                                <TextView
+                                                                                    android:text="俗话说的好，人生十不如意八九。感情上，职场上，亲情上，总能遇到大大小小的挫折，其实，很多这种挫折都是由于人与人之间的不理解引起的"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:id="@+id/brilliantColumnContent"
+                                                                                    android:layout_marginTop="16dp"
+                                                                                    android:textSize="14sp"
+                                                                                    android:textColor="#747474"
+                                                                                    android:ellipsize="end"
+                                                                                    android:maxLines="4"
+                                                                                    android:layout_marginRight="4dp"/>
+                                                                        </LinearLayout>
+
+                                                                        <ImageView
+                                                                            android:layout_width="0dp"
+                                                                            android:layout_height="160dp"
+                                                                            android:layout_weight="0.5"
+                                                                            android:layout_marginLeft="4dp"
+                                                                            android:scaleType="centerCrop"
+                                                                            android:src="@drawable/rollviewpic3"
+                                                                            android:id="@+id/imageView"
+                                                                            android:layout_marginRight="16dp"
+                                                                            />
+                                                                </LinearLayout>
+                                                        </android.support.v7.widget.CardView>
+
+                                                </LinearLayout>
+                                                <!--精彩专栏底部-->
+                                                <android.support.v7.widget.CardView
                                                     android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/brilliantColumnContent"
-                                                    android:layout_marginTop="16dp"
-                                                    android:textSize="14sp"
-                                                    android:textColor="#747474"
-                                                    android:ellipsize="end"
-                                                    android:maxLines="4"  />
+                                                    android:layout_height="wrap_content">
+                                                        <LinearLayout
+                                                            android:orientation="horizontal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="48dp"
+                                                            android:gravity="center_vertical">
+
+
+
+                                                                <TextView
+                                                                    android:text="生活"
+                                                                    android:textColor="@color/colorAccent"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_marginLeft="16dp"
+                                                                    android:padding="5dp"
+                                                                    android:textSize="16sp"
+                                                                    android:background="@drawable/roundborder"/>
+
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/eye"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="123555"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/gray_heart"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="1235"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+
+                                                        </LinearLayout>
+                                                </android.support.v7.widget.CardView>
                                         </LinearLayout>
-
-                                        <ImageView
-                                            android:layout_width="0dp"
-                                            android:layout_height="160dp"
-                                            android:layout_weight="0.5"
-                                            android:scaleType="centerCrop"
-                                            android:src="@drawable/rollviewtest"
-                                            android:id="@+id/imageView"
-                                            android:layout_marginRight="16dp"
-                                            />
-                                </LinearLayout>
-
-
-
-                        </LinearLayout>
-                        <!--精彩专栏底部-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
-
-                                <TextView
-                                    android:text="生活"
-                                    android:textColor="@color/colorAccent"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:padding="5dp"
-                                    android:textSize="16sp"
-                                    android:background="@drawable/roundborder"/>
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/eye"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="123555"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/gray_heart"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="1235"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
-
+                                </android.support.v7.widget.CardView>
                         </LinearLayout>
                         <!--精选圈子题头-->
                         <LinearLayout
@@ -213,132 +285,170 @@
                                     android:textColor="@color/colorAccent"/>
 
                         </LinearLayout>
-                        <!--精选圈子内容-->
+                        <!--精选圈子-->
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="88dp">
-                                <!--精选圈子标题-->
-                                <LinearLayout
-                                    android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                                <android.support.v7.widget.CardView
                                     android:layout_width="match_parent"
-                                    android:layout_height="36dp"
-                                    android:gravity="center_vertical">
-
-                                        <TextView
-                                            android:text="我的高中同学这样对我阿萨德"
-                                            android:textSize="16sp"
-                                            android:textColor="#000000"
-                                            android:ellipsize="end"
-                                            android:maxEms="9"
-                                            android:maxLines="1"
-                                            android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/brilliantCircleName"
-                                            android:layout_marginLeft="16dp"/>
+                                            android:orientation="vertical">
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <!--精选圈子标题-->
+                                                        <LinearLayout
+                                                            android:orientation="horizontal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="36dp"
+                                                            android:gravity="center_vertical">
 
-                                        <TextView
-                                            android:text="昨天 13：32"
-                                            android:textSize="16sp"
-                                            android:textColor="#747474"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/brilliantCircleTime"
-                                            android:layout_marginLeft="16dp"/>
+                                                                <TextView
+                                                                    android:text="我的高中同学这样对我阿萨德"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#000000"
+                                                                    android:ellipsize="end"
+                                                                    android:maxEms="9"
+                                                                    android:maxLines="1"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/brilliantCircleName"
+                                                                    android:layout_marginLeft="16dp"/>
 
-
-                                </LinearLayout>
-                                <!--精选圈子文字内容-->
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="52dp"
-                                    android:gravity="center_vertical">
-
-                                        <TextView
-                                            android:text="TextView最大字数长度经常需要控制，如用来显示昵称，昵称的长度是不固定的，如果TextView后面有其他控件，需要注意是否会被TextView控件挤掉
-xml中属性设置："
-                                            android:textSize="14sp"
-                                            android:ellipsize="end"
-                                            android:maxLines="2"
-                                            android:textColor="#747474"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/brilliantCircleContent"
-                                            android:layout_marginLeft="16dp"
-                                            android:layout_marginRight="16dp"/>
-
-                                </LinearLayout>
+                                                                <TextView
+                                                                    android:text="昨天 13：32"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#747474"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/brilliantCircleTime"
+                                                                    android:layout_marginLeft="16dp"/>
 
 
-                        </LinearLayout>
-                        <!--精选圈子图片-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            >
+                                                        </LinearLayout>
+                                                </android.support.v7.widget.CardView>
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:orientation="vertical">
+                                                                <!--精选圈子内容-->
+                                                                <LinearLayout
+                                                                    android:orientation="vertical"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="52dp">
+                                                                        <!--精选圈子文字内容-->
+                                                                        <LinearLayout
+                                                                            android:orientation="horizontal"
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="52dp"
+                                                                            android:gravity="center_vertical">
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="160dp"
-                                    android:src="@drawable/rollviewtest"
-                                    android:id="@+id/brilliantCirclePic1"
-                                    android:layout_weight="0.5"
-                                    android:layout_marginLeft="16dp"/>
+                                                                                <TextView
+                                                                                    android:text="我高中的时候和这个同学关系很好，但是并没有什么其他的意思（直到现在我对他也完全谈不上有其他意思，毕竟两年没见面并且接触不多），并且高中我暗恋的是他哥们，在我得知他哥们谈恋爱没多久，心理创伤还很严重的时候，他本人（不是他哥们）无缘无故的给我发了一张好人卡，说“如果你长的再好看点我就会喜欢你”这样的话，导致我至今有严重的心理阴影，对自己的外貌极度自卑，结果他最近突然向我表白，外加道歉还说他可以等，我自己谈恋爱已经一年了，也没有要分的意思，虽然说现在想起当年的事情还会有点想哭的感觉，但是我不想耽误他，怎么样才能让他死心？"
+                                                                                    android:textSize="14sp"
+                                                                                    android:ellipsize="end"
+                                                                                    android:maxLines="2"
+                                                                                    android:textColor="#747474"
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:id="@+id/brilliantCircleContent"
+                                                                                    android:layout_marginLeft="16dp"
+                                                                                    android:layout_marginRight="16dp"/>
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="160dp"
-                                    android:src="@drawable/rollviewtest"
-                                    android:id="@+id/brilliantCirclePic2"
-                                    android:layout_weight="0.5"
-                                    android:layout_marginRight="16dp"
-                                    android:layout_marginLeft="8dp"/>
-                        </LinearLayout>
-                        <!--精选圈子底部-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                                                                        </LinearLayout>
 
-                                <TextView
-                                    android:text="社交"
-                                    android:textColor="@color/colorAccent"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:padding="5dp"
-                                    android:textSize="16sp"
-                                    android:background="@drawable/roundborder"/>
 
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/eye"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="123555"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/gray_heart"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="1235"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
+                                                                </LinearLayout>
+                                                                <!--精选圈子图片-->
+                                                                <LinearLayout
+                                                                    android:orientation="horizontal"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center_vertical"
+                                                                    >
 
+                                                                        <ImageView
+                                                                            android:layout_width="160dp"
+                                                                            android:layout_height="160dp"
+                                                                            android:src="@drawable/rollviewpic1"
+                                                                            android:layout_weight="0.5"
+                                                                            android:adjustViewBounds="true"
+                                                                            android:maxWidth="160dp"
+                                                                            android:maxHeight="160dp"
+                                                                            android:layout_marginLeft="16dp"
+                                                                            android:layout_marginRight="4dp"/>
+
+                                                                        <ImageView
+                                                                            android:layout_width="160dp"
+                                                                            android:layout_height="160dp"
+                                                                            android:adjustViewBounds="true"
+                                                                            android:maxWidth="160dp"
+                                                                            android:maxHeight="160dp"
+                                                                            android:src="@drawable/rollviewpic3"
+                                                                            android:layout_weight="0.5"
+                                                                            android:layout_marginRight="16dp"
+                                                                            android:layout_marginLeft="4dp"
+
+                                                                            />
+                                                                </LinearLayout>
+                                                        </LinearLayout>
+
+                                                </android.support.v7.widget.CardView>
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <!--精选圈子底部-->
+                                                        <LinearLayout
+                                                            android:orientation="horizontal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="48dp"
+                                                            android:gravity="center_vertical">
+
+                                                                <TextView
+                                                                    android:text="社交"
+                                                                    android:textColor="@color/colorAccent"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_marginLeft="16dp"
+                                                                    android:padding="5dp"
+                                                                    android:textSize="16sp"
+                                                                    android:background="@drawable/roundborder"/>
+
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/eye"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="3555"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/gray_heart"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="1235"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+
+                                                        </LinearLayout>
+                                                </android.support.v7.widget.CardView>
+                                        </LinearLayout>
+                                </android.support.v7.widget.CardView>
                         </LinearLayout>
                         <!--精选文章题头-->
                         <LinearLayout
@@ -368,107 +478,179 @@ xml中属性设置："
                                     android:textColor="@color/colorAccent"/>
 
                         </LinearLayout>
-                        <!--精选文章标题-->
+                        <!--精选文章-->
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="72dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content">
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <!--精选文章标题-->
+                                                        <LinearLayout
+                                                            android:orientation="vertical"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="72dp"
+                                                            android:gravity="center_vertical">
 
-                                <TextView
-                                    android:text="如何理解上司的隐藏话语"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"
-                                    android:ellipsize="end"
-                                    android:maxLines="1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/brilliantArticleName"
-                                    android:layout_marginLeft="16dp"/>
+                                                                <TextView
+                                                                    android:text="学会拒绝"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#000000"
+                                                                    android:ellipsize="end"
+                                                                    android:maxLines="1"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/brilliantArticleName"
+                                                                    android:layout_marginLeft="16dp"/>
 
-                                <TextView
-                                    android:text="昨天 13：32"
-                                    android:textSize="14sp"
-                                    android:textColor="#747474"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/brilliantArticleTime"
-                                    android:layout_marginLeft="16dp"/>
+                                                                <TextView
+                                                                    android:text="昨天 13：32"
+                                                                    android:textSize="14sp"
+                                                                    android:textColor="#747474"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/brilliantArticleTime"
+                                                                    android:layout_marginLeft="16dp"/>
 
 
+                                                        </LinearLayout>
+                                                </android.support.v7.widget.CardView>
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:orientation="vertical">
+                                                                <!--精选文章图片-->
+                                                                <ImageView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="192dp"
+                                                                    android:scaleType="centerCrop"
+                                                                    android:src="@drawable/rollviewpic2" />
+                                                                <!--精选文章内容-->
+                                                                <LinearLayout
+                                                                    android:orientation="vertical"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="76dp"
+                                                                    android:gravity="center_vertical">
+
+                                                                        <TextView
+                                                                            android:text="拒绝不是一种技术，而是一种态度，所以你需要的，是底气----我不怕得罪你，我今后也不靠你。
+
+反复地问自己，是否能做到这样；不断地反思自己立身之本是什么，不断地看懂自己爱着谁，又被谁爱。底气不是天生的，是积累出来的。
+
+难以拒绝人，是怕失去别人的好感，破坏双方关系。那我告诉你，一旦遇到利益型(一旦不给与利益，就威胁破坏关系)的对手，你很快会输光身上的最后一件衣服。
+"
+                                                                            android:textSize="14sp"
+                                                                            android:textColor="#747474"
+                                                                            android:ellipsize="end"
+                                                                            android:maxLines="2"
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:id="@+id/brilliantArticleContent"
+                                                                            android:layout_marginLeft="16dp"
+                                                                            android:layout_marginRight="16dp"
+                                                                            />
+
+                                                                </LinearLayout>
+                                                        </LinearLayout>
+
+                                                </android.support.v7.widget.CardView>
+                                                <android.support.v7.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                        <!--精选文章底部-->
+                                                        <LinearLayout
+                                                            android:orientation="horizontal"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="48dp"
+                                                            android:gravity="center_vertical">
+
+                                                                <TextView
+                                                                    android:text="工作"
+                                                                    android:textColor="@color/colorAccent"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_marginLeft="16dp"
+                                                                    android:padding="5dp"
+                                                                    android:textSize="16sp"
+                                                                    android:background="@drawable/roundborder"/>
+
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/eye"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="123555"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <ImageView
+                                                                    android:layout_width="24dp"
+                                                                    android:layout_height="24dp"
+                                                                    app:srcCompat="@drawable/gray_heart"
+                                                                    android:layout_marginLeft="4dp"/>
+                                                                <TextView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:text="1235"
+                                                                    android:textSize="16sp"
+                                                                    android:textColor="#BDBDBD"
+                                                                    android:layout_marginLeft="4dp"/>
+
+                                                        </LinearLayout>
+                                                </android.support.v7.widget.CardView>
+                                        </LinearLayout>
+                                </android.support.v7.widget.CardView>
                         </LinearLayout>
-                        <!--精选文章图片-->
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="192dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/rollviewtest"
-                            android:id="@+id/brilliantArticlePic" />
-                        <!--精选文章内容-->
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="76dp"
-                            android:gravity="center_vertical">
 
-                                <TextView
-                                    android:text="如何理解上司的隐藏话语如何理解上司的隐藏话语如何理解上司的隐藏话语如何理解上司的隐藏话语如何理解上司的隐藏话语如何理解上司的隐藏话语"
-                                    android:textSize="16sp"
-                                    android:textColor="#747474"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/brilliantArticleContent"
-                                    android:layout_marginLeft="16dp"/>
 
-                        </LinearLayout>
-
-                        <!--精选文章底部-->
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
-
-                                <TextView
-                                    android:text="工作"
-                                    android:textColor="@color/colorAccent"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:padding="5dp"
-                                    android:textSize="16sp"
-                                    android:background="@drawable/roundborder"/>
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/eye"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="123555"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    app:srcCompat="@drawable/gray_heart"
-                                    android:layout_marginLeft="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="1235"
-                                    android:textSize="16sp"
-                                    android:textColor="#BDBDBD"
-                                    android:layout_marginLeft="4dp"/>
-
-                        </LinearLayout>
                 </LinearLayout>
         </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:id="@+id/brilliantColumnPic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic"
+                    android:layout_marginLeft="16dp"/>
+
+                <TextView
+                    android:text="吴雄博"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brilliantColumnName"
+                    android:layout_marginLeft="16dp"/>
+
+                <TextView
+                    android:text="3小时前"
+                    android:textSize="16sp"
+                    android:textColor="#747474"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brilliantColumnTime"
+                    android:layout_marginLeft="16dp"/>
+
+
+        </LinearLayout>
 
 
 </LinearLayout>

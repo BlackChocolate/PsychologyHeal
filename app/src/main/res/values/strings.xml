@@ -14,4 +14,35 @@
     <string name="more"><![CDATA[更多 >]]></string>
     <string name="brilliantCircle">精选圈子</string>
     <string name="brilliantArticle">精选文章</string>
+    <string name="PhoneNumberChinese">手机号</string>
+    <string name="captchaChinese">验证码</string>
+    <string name="sendCaptchaChinese">发送验证码</string>
+    <string name="nextChinese">下一步</string>
+    <string name="nicknameChinese">昵称</string>
+    <string name="passwordConfirm">确认密码</string>
+    <string name="registerAndLogin">注册并登录</string>
+    <string name="toBeDoctor">想成为咨询师？</string>
+    <string name="camera">直播</string>
+    <string name="column">专栏</string>
+    <string name="article">文章</string>
+    <string name="test">测试</string>
+    <string name="diary">日记</string>
+    <string name="orderingChinese">预约</string>
+    <string name="sameCityChinese">同城</string>
+    <string name="hotChinese">热门</string>
+    <string name="doctorIfoChinese">咨询师详细资料</string>
+    <string name="strengthChinese">擅长领域:</string>
+    <string name="followChinese">关注</string>
+    <string name="pchatChinese">私信</string>
+    <string name="orderChinese">立即预约</string>
+    <string name="commentChinese">咨询</string>
+    <string name="createOrderChinese">创建预约订单</string>
+    <string-array name="optional_array">
+        <item>生活</item>
+        <item>学习</item>
+        <item>工作</item>
+        <item>恋情</item>
+        <item>亲情</item>
+        <item>社交</item>
+    </string-array>
 </resources>

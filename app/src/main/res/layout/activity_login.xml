@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
     <ImageView android:src="@drawable/logo"
         android:contentDescription="@string/logo"
         android:layout_width="144dp"
         android:layout_height="144dp"
-        android:layout_marginBottom="16dp"
-        />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
 
     <TabHost
         android:id="@+id/tabHost"
@@ -33,11 +35,80 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/PhoneNumberChinese"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:ems="10"
+                        android:id="@+id/registerPhoneNumber" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/captchaChinese"
+                        android:textSize="18sp"
+                        android:layout_marginTop="8dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:ems="10"
+                            android:id="@+id/captcha" />
+
+                        <Button
+                            android:text="@string/sendCaptchaChinese"
+                            android:textSize="16sp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.382"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/shape_corner"
+                            android:textColor="#FFFFFF"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sendCaptchaBtn" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nextChinese"
+                        android:id="@+id/next"
+                        android:background="@drawable/shape_corner"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:layout_marginTop="32dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:text="@string/usernameChinese"
@@ -45,7 +116,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:layout_marginTop="16dp"
-                        android:id="@+id/textView" />
+                        />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -62,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:layout_marginTop="8dp"
-                        android:id="@+id/textView2" />
+                        />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -75,30 +146,26 @@
 
                     <Button
                         android:text="@string/login"
-                        android:layout_margin="16dp"
-                        android:background="#00bbd3"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_corner"
                         android:textColor="@color/avoscloud_feedback_white"
                         android:textSize="20sp"
                         android:letterSpacing="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/loginBtn" />
+                        android:id="@+id/loginBtn"
+                        />
 
                     <TextView
                         android:text="@string/resetPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
+                        android:textSize="18sp"
                         android:layout_marginTop="16dp"
+                        android:textColor="@color/colorLightGrey"
                         android:id="@+id/resetPassword" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/register"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                </LinearLayout>
 
             </FrameLayout>
         </LinearLayout>
