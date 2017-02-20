@@ -19,6 +19,8 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.RequestMobileCodeCallback;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
     EditText loginUsername,registerPhoneNumber,Captcha,loginPassword;
     TextView resetPassword;
@@ -123,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                                 String temp[] = e.toString().split("\"");
                                 Toast.makeText(getApplicationContext(), temp[temp.length-2],
                                         Toast.LENGTH_SHORT).show();
-                                if(temp[temp.length-2]=="登录成功"){
+                                if(Objects.equals(temp[temp.length - 2], "登录成功")){
                                     Intent intent=new Intent();
                                     intent.setClass(LoginActivity.this,MainActivity.class);
                                     startActivity(intent);

@@ -2,6 +2,7 @@ package com.example.sukurax.psychologyheal;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,10 +24,20 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    ImageView column;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_home,container,false);
         initBanner(view);
+        column=(ImageView)view.findViewById(R.id.column);
+        column.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(getActivity(),MyOrderActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

@@ -45,6 +45,7 @@
         <activity android:name=".registerActivity" />
         <activity android:name=".DoctorIfoActivity"/>
         <activity android:name=".OrderActivity"/>
+        <activity android:name=".MyOrderActivity"/>
     </application>
 
 </manifest>

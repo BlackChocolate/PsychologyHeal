@@ -37,6 +37,7 @@
     <string name="orderChinese">立即预约</string>
     <string name="commentChinese">咨询</string>
     <string name="createOrderChinese">创建预约订单</string>
+    <string name="MyOrderChinese">我的订单</string>
     <string-array name="optional_array">
         <item>生活</item>
         <item>学习</item>

@@ -34,9 +34,7 @@ public class OrderActivity extends AppCompatActivity {
         orderBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(OrderActivity.this,DoctorIfoActivity.class);
-                startActivity(intent);
+                OrderActivity.super.onBackPressed();
             }
         });
         orderAndPayBtn.setOnClickListener(new View.OnClickListener() {

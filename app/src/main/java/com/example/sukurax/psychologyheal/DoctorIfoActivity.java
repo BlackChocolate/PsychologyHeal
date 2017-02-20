@@ -31,9 +31,7 @@ public class DoctorIfoActivity extends AppCompatActivity{
         doctorIfoBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(DoctorIfoActivity.this,MainActivity.class);
-                startActivity(intent);
+                DoctorIfoActivity.super.onBackPressed();
             }
         });
     }
