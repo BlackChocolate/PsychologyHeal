@@ -2,12 +2,15 @@ package com.example.sukurax.psychologyheal;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_circle:
                 if(fg2 == null){
-                    fg2 = new MyFragment("第二个Fragment");
+                    fg2 = new MyFragment("圈子界面完善中");
                     fTransaction.add(R.id.ly_content,fg2);
                 }else{
                     fTransaction.show(fg2);
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_camera:
                 if(fg4 == null){
-                    fg4 = new MyFragment("第四个Fragment");
+                    fg4 = new MyFragment("直播界面完善中");
                     fTransaction.add(R.id.ly_content,fg4);
                 }else{
                     fTransaction.show(fg4);
@@ -95,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_man:
                 if(fg5 == null){
-                    fg5 = new MyFragment("第五个Fragment");
+                    fg5 = new MyFragment("我的界面完善中");
                     fTransaction.add(R.id.ly_content,fg5);
                 }else{
                     fTransaction.show(fg5);
@@ -113,5 +116,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         if(fg4 != null)fragmentTransaction.hide(fg4);
         if(fg5 != null)fragmentTransaction.hide(fg5);
     }
+
+    public void toDoctorIfo(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, DoctorIfoActivity.class);
+        startActivity(intent);
+    }
+
 
 }

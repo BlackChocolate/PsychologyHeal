@@ -17,30 +17,35 @@
             android:id="@+id/rb_home"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_home"
-            android:text="@string/home" />
+            android:text="@string/home"
+            android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/rb_circle"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_circle"
-            android:text="@string/circle" />
+            android:text="@string/circle"
+            android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/rb_heart"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_heart"
-            android:text="@string/heart" />
+            android:text="@string/heart"
+            android:textSize="16sp"/>
 
         <RadioButton
             android:id="@+id/rb_camera"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_camera"
-            android:text="@string/camera"/>
+            android:text="@string/camera"
+            android:textSize="16sp"/>
         <RadioButton
             android:id="@+id/rb_man"
             style="@style/tab_menu_item"
             android:drawableTop="@drawable/tab_menu_man"
-            android:text="@string/man"/>
+            android:text="@string/man"
+            android:textSize="16sp"/>
 
     </RadioGroup>
 

@@ -16,7 +16,7 @@ import com.avos.avoscloud.SaveCallback;
  * Created by sukurax on 2017/2/3.
  */
 
-public class registerActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     EditText nickName,Password,PasswordConfirm;
     String nickname,password,passwordconfirm;
     Button registerAndLogin;
@@ -25,12 +25,12 @@ public class registerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        Intent intent = getIntent();
-        String phoneNumber = intent.getStringExtra("phoneNumber");
-        nickName=(EditText)findViewById(R.id.nickname);
-        Password=(EditText)findViewById(R.id.registerPassword);
-        PasswordConfirm=(EditText)findViewById(R.id.registerPasswordConfirm);
-        registerAndLogin=(Button)findViewById(R.id.registerAndLogin);
+        innerRegisterActivity();
+        getWidgetId();
+        setClickListener();
+    }
+
+    private void setClickListener() {
         registerAndLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +51,7 @@ public class registerActivity extends AppCompatActivity {
                     });
 
                     Intent intent = new Intent();
-                    intent.setClass(registerActivity.this, MainActivity.class);
+                    intent.setClass(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(), "输入密码不一致！",
@@ -59,6 +59,18 @@ public class registerActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
+
+    private void getWidgetId() {
+        nickName=(EditText)findViewById(R.id.nickname);
+        Password=(EditText)findViewById(R.id.registerPassword);
+        PasswordConfirm=(EditText)findViewById(R.id.registerPasswordConfirm);
+        registerAndLogin=(Button)findViewById(R.id.registerAndLogin);
+    }
+
+    private void innerRegisterActivity() {
+        Intent intent = getIntent();
+        String phoneNumber = intent.getStringExtra("phoneNumber");
+    }
+
 }

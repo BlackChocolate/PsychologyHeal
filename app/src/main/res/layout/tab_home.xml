@@ -15,11 +15,49 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                        <com.lapism.searchview.SearchView
-                            android:id="@+id/searchView"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="64dp"
-                            />
+                            android:orientation="horizontal"
+                            android:background="@color/colorAccent"
+                            android:padding="8dp">
+
+                                <android.support.v7.widget.Toolbar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="?attr/colorPrimary"
+                                    android:theme="?attr/actionBarTheme"
+                                    android:minHeight="?attr/actionBarSize"
+                                    android:id="@+id/toolbar2">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:gravity="center_vertical">
+
+                                                <SearchView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="-15dp"/>
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_weight="0.9"
+                                                    android:layout_height="wrap_content"
+                                                    android:hint="搜索专栏、圈子、文章"
+                                                    android:textSize="14sp"
+                                                    android:textColor="#747474"/>
+                                                <ImageView
+                                                    android:layout_width="0dp"
+                                                    android:layout_weight="0.1"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="16dp"
+                                                    android:src="@drawable/recording"/>
+
+                                        </LinearLayout>
+
+                                </android.support.v7.widget.Toolbar>
+                        </LinearLayout>
 
                         <com.bigkoo.convenientbanner.ConvenientBanner
                             android:id="@+id/convenientBanner"
@@ -31,7 +69,7 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp">
+                            android:layout_marginBottom="0dp">
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -112,6 +150,7 @@
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
                             android:background="@drawable/border"
+                            android:layout_marginTop="8dp"
                             >
 
                                 <TextView
@@ -136,8 +175,7 @@
                         <!--精彩专栏-->
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp">
+                            android:layout_height="wrap_content">
                                 <android.support.v7.widget.CardView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
@@ -150,9 +188,7 @@
                                                     android:orientation="vertical"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content">
-                                                        <android.support.v7.widget.CardView
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="wrap_content"></android.support.v7.widget.CardView>
+
                                                         <android.support.v7.widget.CardView
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content">
@@ -178,17 +214,17 @@
                                                                                     android:textColor="#000000"
                                                                                     />
 
-                                                                                <TextView
-                                                                                    android:text="俗话说的好，人生十不如意八九。感情上，职场上，亲情上，总能遇到大大小小的挫折，其实，很多这种挫折都是由于人与人之间的不理解引起的"
-                                                                                    android:layout_width="match_parent"
-                                                                                    android:layout_height="wrap_content"
-                                                                                    android:id="@+id/brilliantColumnContent"
-                                                                                    android:layout_marginTop="16dp"
-                                                                                    android:textSize="14sp"
-                                                                                    android:textColor="#747474"
-                                                                                    android:ellipsize="end"
-                                                                                    android:maxLines="4"
-                                                                                    android:layout_marginRight="4dp"/>
+                                                                            <TextView
+                                                                                android:text="俗话说的好，人生十不如意八九。感情上，职场上，亲情上，总能遇到大大小小的挫折，其实，很多这种挫折都是由于人与人之间的不理解引起的"
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="wrap_content"
+                                                                                android:id="@+id/brilliantColumnContent"
+                                                                                android:layout_marginTop="16dp"
+                                                                                android:textSize="14sp"
+                                                                                android:textColor="#747474"
+                                                                                android:ellipsize="end"
+                                                                                android:maxLines="4"
+                                                                                android:layout_marginRight="4dp"/>
                                                                         </LinearLayout>
 
                                                                         <ImageView
@@ -209,50 +245,51 @@
                                                 <android.support.v7.widget.CardView
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content">
-                                                        <LinearLayout
-                                                            android:orientation="horizontal"
-                                                            android:layout_width="match_parent"
-                                                            android:layout_height="48dp"
-                                                            android:gravity="center_vertical">
+
+                                                    <LinearLayout
+                                                        android:orientation="horizontal"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="48dp"
+                                                        android:gravity="center_vertical">
 
 
 
-                                                                <TextView
-                                                                    android:text="生活"
-                                                                    android:textColor="@color/colorAccent"
-                                                                    android:layout_width="wrap_content"
-                                                                    android:layout_height="wrap_content"
-                                                                    android:layout_marginLeft="16dp"
-                                                                    android:padding="5dp"
-                                                                    android:textSize="16sp"
-                                                                    android:background="@drawable/roundborder"/>
+                                                            <TextView
+                                                                android:text="生活"
+                                                                android:textColor="@color/colorAccent"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginLeft="16dp"
+                                                                android:padding="5dp"
+                                                                android:textSize="16sp"
+                                                                android:background="@drawable/roundborder"/>
 
-                                                                <ImageView
-                                                                    android:layout_width="24dp"
-                                                                    android:layout_height="24dp"
-                                                                    app:srcCompat="@drawable/eye"
-                                                                    android:layout_marginLeft="4dp"/>
-                                                                <TextView
-                                                                    android:layout_width="wrap_content"
-                                                                    android:layout_height="wrap_content"
-                                                                    android:text="123555"
-                                                                    android:textSize="16sp"
-                                                                    android:textColor="#BDBDBD"
-                                                                    android:layout_marginLeft="4dp"/>
-                                                                <ImageView
-                                                                    android:layout_width="24dp"
-                                                                    android:layout_height="24dp"
-                                                                    app:srcCompat="@drawable/gray_heart"
-                                                                    android:layout_marginLeft="4dp"/>
-                                                                <TextView
-                                                                    android:layout_width="wrap_content"
-                                                                    android:layout_height="wrap_content"
-                                                                    android:text="1235"
-                                                                    android:textSize="16sp"
-                                                                    android:textColor="#BDBDBD"
-                                                                    android:layout_marginLeft="4dp"/>
+                                                            <ImageView
+                                                                android:layout_width="24dp"
+                                                                android:layout_height="24dp"
+                                                                app:srcCompat="@drawable/eye"
+                                                                android:layout_marginLeft="4dp"/>
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="123555"
+                                                                android:textSize="16sp"
+                                                                android:textColor="#BDBDBD"
+                                                                android:layout_marginLeft="4dp"/>
+                                                            <ImageView
+                                                                android:layout_width="24dp"
+                                                                android:layout_height="24dp"
+                                                                app:srcCompat="@drawable/gray_heart"
+                                                                android:layout_marginLeft="4dp"/>
+                                                            <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="1235"
+                                                                android:textSize="16sp"
+                                                                android:textColor="#BDBDBD"
+                                                                android:layout_marginLeft="4dp"/>
 
-                                                        </LinearLayout>
+                                                    </LinearLayout>
                                                 </android.support.v7.widget.CardView>
                                         </LinearLayout>
                                 </android.support.v7.widget.CardView>
@@ -264,6 +301,7 @@
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
                             android:background="@drawable/border"
+                            android:layout_marginTop="8dp"
                             >
 
                                 <TextView
@@ -456,6 +494,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
+                            android:layout_marginTop="8dp"
                             android:background="@drawable/border"
                             >
 

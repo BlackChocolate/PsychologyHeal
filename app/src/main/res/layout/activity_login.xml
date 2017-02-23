@@ -17,7 +17,7 @@
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,6 +35,69 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:text="@string/usernameChinese"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textSize="24sp"
+                        android:ems="10"
+                        android:id="@+id/loginUsername" />
+
+                    <TextView
+                        android:text="@string/passwordChinese"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginTop="8dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textSize="24sp"
+                        android:ems="10"
+                        android:id="@+id/loginPassword" />
+
+                    <Button
+                        android:text="@string/login"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/shape_corner"
+                        android:textColor="@color/avoscloud_feedback_white"
+                        android:textSize="20sp"
+                        android:letterSpacing="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/loginBtn"
+                        />
+
+                    <TextView
+                        android:text="@string/resetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/colorLightGrey"
+                        android:id="@+id/resetPassword" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/register"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -47,7 +110,7 @@
                         android:text="@string/PhoneNumberChinese"
                         android:textSize="18sp"
                         android:layout_marginTop="16dp"
-                        />
+                        android:id="@+id/textView3" />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -101,69 +164,6 @@
                         android:layout_marginTop="32dp"
                         />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/login"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:text="@string/usernameChinese"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_marginTop="16dp"
-                        />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:textSize="24sp"
-                        android:ems="10"
-                        android:id="@+id/loginUsername" />
-
-                    <TextView
-                        android:text="@string/passwordChinese"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_marginTop="8dp"
-                        />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:textSize="24sp"
-                        android:ems="10"
-                        android:id="@+id/loginPassword" />
-
-                    <Button
-                        android:text="@string/login"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/shape_corner"
-                        android:textColor="@color/avoscloud_feedback_white"
-                        android:textSize="20sp"
-                        android:letterSpacing="0.5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/loginBtn"
-                        />
-
-                    <TextView
-                        android:text="@string/resetPassword"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_marginTop="16dp"
-                        android:textColor="@color/colorLightGrey"
-                        android:id="@+id/resetPassword" />
                 </LinearLayout>
 
 

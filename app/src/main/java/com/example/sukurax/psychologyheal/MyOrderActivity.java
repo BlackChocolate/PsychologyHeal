@@ -16,8 +16,12 @@ public class MyOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myorder);
+
         innerMyOrderActivity();
+        getWidgetId();
+        setClickListener();
     }
+
 
     private void innerMyOrderActivity() {
         TabHost host = (TabHost)findViewById(R.id.tabHost2);
@@ -48,7 +52,12 @@ public class MyOrderActivity extends AppCompatActivity {
         spec.setIndicator("评价");
         host.addTab(spec);
 
+    }
+
+    private void getWidgetId() {
         myOrderBackBtn=(ImageView)findViewById(R.id.myOrderBackBtn);
+    }
+    private void setClickListener() {
         myOrderBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,5 +65,4 @@ public class MyOrderActivity extends AppCompatActivity {
             }
         });
     }
-
 }

@@ -8,8 +8,8 @@
         <!-- 隐藏标题栏 -->
         <item name="android:windowNoTitle">true</item>
 
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#747474</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

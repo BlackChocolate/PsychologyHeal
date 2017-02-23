@@ -42,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".registerActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".DoctorIfoActivity"/>
         <activity android:name=".OrderActivity"/>
         <activity android:name=".MyOrderActivity"/>

@@ -3,12 +3,9 @@ package com.example.sukurax.psychologyheal;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +28,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        innerLoginActivity();
+        getWidgetId();
+        setClickListener();
+
+    }
+
+    private void innerLoginActivity() {
         TabHost host = (TabHost)findViewById(R.id.tabHost);
         host.setup();
 
@@ -43,7 +48,9 @@ public class LoginActivity extends AppCompatActivity {
         spec.setContent(R.id.register);
         spec.setIndicator("注册");
         host.addTab(spec);
+    }
 
+    private void getWidgetId() {
         loginUsername=(EditText)findViewById(R.id.loginUsername);
         loginPassword=(EditText)findViewById(R.id.loginPassword);
         loginBtn=(Button)findViewById(R.id.loginBtn);
@@ -53,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         sendCaptchaBtn=(Button)findViewById(R.id.sendCaptchaBtn);
         next=(Button)findViewById(R.id.next);
 
+        resetPassword=(TextView)findViewById(R.id.resetPassword);
+    }
+    private void setClickListener() {
         sendCaptchaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(e==null){
                                 Intent intent = new Intent();
                                 intent.putExtra("phoneNumber", registerphonenumber);
-                                intent.setClass(LoginActivity.this, registerActivity.class);
+                                intent.setClass(LoginActivity.this, RegisterActivity.class);
                                 startActivity(intent);
                             }else{
                                 String temp[] = e.toString().split("\"");
@@ -137,7 +147,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        resetPassword=(TextView)findViewById(R.id.resetPassword);
         resetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,4 +155,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }

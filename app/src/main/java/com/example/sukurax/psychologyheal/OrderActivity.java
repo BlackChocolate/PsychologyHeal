@@ -22,14 +22,22 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-        orderBackBtn=(ImageView)findViewById(R.id.orderBackBtn);
-        orderAndPayBtn=(LinearLayout)findViewById(R.id.orderAndPayBtn);
 
+        innerOrderActivity();
+        getWidgetId();
+        setClickListener();
+
+    }
+
+    private void innerOrderActivity() {
         Spinner spinner = (Spinner) findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(OrderActivity.this,
                 R.array.optional_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+    }
+
+    private void setClickListener() {
 
         orderBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +52,11 @@ public class OrderActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void getWidgetId() {
+        orderBackBtn=(ImageView)findViewById(R.id.orderBackBtn);
+        orderAndPayBtn=(LinearLayout)findViewById(R.id.orderAndPayBtn);
 
     }
 }

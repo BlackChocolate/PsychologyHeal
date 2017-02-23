@@ -16,11 +16,49 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.lapism.searchview.SearchView
-                android:id="@+id/searchView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                />
+                android:orientation="horizontal"
+                android:background="@color/colorAccent"
+                android:padding="8dp">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize"
+                    android:id="@+id/toolbar2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <SearchView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="-15dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.9"
+                            android:layout_height="wrap_content"
+                            android:hint="搜索专栏、圈子、文章"
+                            android:textSize="14sp"
+                            android:textColor="#747474"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/recording"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.Toolbar>
+            </LinearLayout>
 
             <!--预约专栏题头-->
             <LinearLayout
@@ -54,8 +92,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -64,6 +101,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="toDoctorIfo"
                         >
 
                         <LinearLayout
@@ -74,8 +112,7 @@
                             <com.example.sukurax.psychologyheal.XCRoundImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"
-                                android:id="@+id/doctorpic"/>
+                                android:src="@drawable/doctorpic"/>
 
 
                             <LinearLayout
@@ -159,6 +196,7 @@
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:background="@drawable/border"
+                android:layout_marginTop="8dp"
                 >
 
                 <TextView
@@ -184,8 +222,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -193,6 +230,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="toDoctorIfo"
                         card_view:cardCornerRadius="0dp">
 
                         <LinearLayout
@@ -285,7 +323,7 @@
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp">
+                android:layout_marginTop="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -293,6 +331,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="toDoctorIfo"
                         card_view:cardCornerRadius="0dp">
 
                         <LinearLayout
@@ -386,6 +425,7 @@
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:background="@drawable/border"
+                android:layout_marginTop="8dp"
                 >
 
                 <TextView
@@ -411,8 +451,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -420,6 +459,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="toDoctorIfo"
                         card_view:cardCornerRadius="0dp">
 
                         <LinearLayout
@@ -514,6 +554,7 @@
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:background="@drawable/border"
+                android:layout_marginTop="8dp"
                 >
 
                 <LinearLayout
@@ -542,8 +583,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -551,6 +591,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="toDoctorIfo"
                         card_view:cardCornerRadius="0dp">
 
                         <LinearLayout
