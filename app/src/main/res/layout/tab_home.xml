@@ -62,7 +62,7 @@
                         <com.bigkoo.convenientbanner.ConvenientBanner
                             android:id="@+id/convenientBanner"
                             android:layout_width="match_parent"
-                            android:layout_height="200dp"
+                            android:layout_height="170dp"
                             app:canLoop="true"
                         />
 
@@ -84,7 +84,8 @@
                                                     android:layout_height="36dp"
                                                     android:src="@drawable/column"
                                                     android:layout_weight="0.25"
-                                                    android:id="@+id/column"/>
+                                                    android:id="@+id/column"
+                                                    android:layout_marginLeft="32dp"/>
                                                 <ImageView
                                                     android:layout_width="36dp"
                                                     android:layout_height="36dp"
@@ -102,13 +103,15 @@
                                                     android:layout_height="36dp"
                                                     android:src="@drawable/diary"
                                                     android:layout_weight="0.25"
-                                                    android:id="@+id/diary"/>
+                                                    android:id="@+id/diary"
+                                                    android:layout_marginRight="32dp"/>
                                         </LinearLayout>
+
                                         <LinearLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="50dp"
+                                            android:layout_height="40dp"
                                             android:orientation="horizontal"
-                                            android:paddingTop="12dp"
+                                            android:paddingTop="7dp"
                                             >
                                                 <TextView
                                                     android:layout_width="wrap_content"
@@ -116,7 +119,8 @@
                                                     android:layout_weight="0.25"
                                                     android:textSize="16sp"
                                                     android:gravity="center_horizontal"
-                                                    android:text="@string/column"/>
+                                                    android:text="@string/column"
+                                                    android:layout_marginLeft="32dp"/>
                                                 <TextView
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -137,7 +141,8 @@
                                                     android:gravity="center_horizontal"
                                                     android:layout_weight="0.25"
                                                     android:textSize="16sp"
-                                                    android:text="@string/diary"/>
+                                                    android:text="@string/diary"
+                                                    android:layout_marginRight="32dp"/>
                                         </LinearLayout>
                                 </LinearLayout>
                         </android.support.v7.widget.CardView>
@@ -150,7 +155,7 @@
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
                             android:background="@drawable/border"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="5dp"
                             >
 
                                 <TextView
@@ -195,14 +200,14 @@
                                                                 <LinearLayout
                                                                     android:orientation="horizontal"
                                                                     android:layout_width="match_parent"
-                                                                    android:layout_height="192dp"
+                                                                    android:layout_height="162dp"
                                                                     android:gravity="center_vertical">
 
                                                                         <LinearLayout
                                                                             android:orientation="vertical"
                                                                             android:layout_width="0dp"
                                                                             android:layout_weight="0.5"
-                                                                            android:layout_height="160dp"
+                                                                            android:layout_height="130dp"
                                                                             android:layout_marginLeft="16dp"
                                                                             >
                                                                                 <TextView
@@ -223,17 +228,17 @@
                                                                                 android:textSize="14sp"
                                                                                 android:textColor="#747474"
                                                                                 android:ellipsize="end"
-                                                                                android:maxLines="4"
+                                                                                android:maxLines="3"
                                                                                 android:layout_marginRight="4dp"/>
                                                                         </LinearLayout>
 
                                                                         <ImageView
                                                                             android:layout_width="0dp"
-                                                                            android:layout_height="160dp"
+                                                                            android:layout_height="130dp"
                                                                             android:layout_weight="0.5"
                                                                             android:layout_marginLeft="4dp"
                                                                             android:scaleType="centerCrop"
-                                                                            android:src="@drawable/rollviewpic3"
+                                                                            android:src="@drawable/rollviewpic2"
                                                                             android:id="@+id/imageView"
                                                                             android:layout_marginRight="16dp"
                                                                             />
@@ -301,7 +306,7 @@
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
                             android:background="@drawable/border"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="5dp"
                             >
 
                                 <TextView
@@ -413,7 +418,7 @@
 
                                                                         <ImageView
                                                                             android:layout_width="160dp"
-                                                                            android:layout_height="160dp"
+                                                                            android:layout_height="130dp"
                                                                             android:src="@drawable/rollviewpic1"
                                                                             android:layout_weight="0.5"
                                                                             android:adjustViewBounds="true"
@@ -424,7 +429,7 @@
 
                                                                         <ImageView
                                                                             android:layout_width="160dp"
-                                                                            android:layout_height="160dp"
+                                                                            android:layout_height="130dp"
                                                                             android:adjustViewBounds="true"
                                                                             android:maxWidth="160dp"
                                                                             android:maxHeight="160dp"
@@ -433,7 +438,7 @@
                                                                             android:layout_marginRight="16dp"
                                                                             android:layout_marginLeft="4dp"
 
-                                                                            />
+                                                                            android:id="@+id/imageView2" />
                                                                 </LinearLayout>
                                                         </LinearLayout>
 
@@ -446,7 +451,8 @@
                                                             android:orientation="horizontal"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="48dp"
-                                                            android:gravity="center_vertical">
+                                                            android:gravity="center_vertical"
+                                                            android:layout_marginTop="1dp">
 
                                                                 <TextView
                                                                     android:text="社交"
@@ -494,7 +500,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="5dp"
                             android:background="@drawable/border"
                             >
 
@@ -539,7 +545,7 @@
                                                             android:gravity="center_vertical">
 
                                                                 <TextView
-                                                                    android:text="学会拒绝"
+                                                                    android:text="学会控制"
                                                                     android:textSize="16sp"
                                                                     android:textColor="#000000"
                                                                     android:ellipsize="end"
@@ -571,7 +577,7 @@
                                                                 <!--精选文章图片-->
                                                                 <ImageView
                                                                     android:layout_width="match_parent"
-                                                                    android:layout_height="192dp"
+                                                                    android:layout_height="162dp"
                                                                     android:scaleType="centerCrop"
                                                                     android:src="@drawable/rollviewpic2" />
                                                                 <!--精选文章内容-->
@@ -611,7 +617,8 @@
                                                             android:orientation="horizontal"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="48dp"
-                                                            android:gravity="center_vertical">
+                                                            android:gravity="center_vertical"
+                                                            android:layout_marginTop="1dp">
 
                                                                 <TextView
                                                                     android:text="工作"

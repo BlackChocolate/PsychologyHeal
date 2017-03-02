@@ -5,15 +5,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +31,31 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    ImageView column;
+    ImageView column,article;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_home,container,false);
         initBanner(view);
+
+        EMClient.getInstance().login("sukurax",
+                "zxczxc", new EMCallBack() {
+                    @Override
+                    public void onSuccess() {  //登录成功
+                        Log.i("lf","登录成功");
+                    }
+
+                    @Override
+                    public void onError(int i, String s) {  //登录失败
+                        Log.i("lf","登录失败"+i+" , "+s);
+
+                    }
+
+                    @Override
+                    public void onProgress(int i, String s) {
+
+                    }
+                });
+
         column=(ImageView)view.findViewById(R.id.column);
         column.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +63,16 @@ public class HomeFragment extends Fragment {
                 Intent intent=new Intent();
                 intent.setClass(getActivity(),MyOrderActivity.class);
                 startActivity(intent);
+            }
+        });
+        article=(ImageView)view.findViewById(R.id.article);
+        article.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chat = new Intent(getActivity(),ChatActivity.class);
+                chat.putExtra(EaseConstant.EXTRA_USER_ID,"doctor");  //对方账号
+                chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
+                startActivity(chat);
             }
         });
         return view;

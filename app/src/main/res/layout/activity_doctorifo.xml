@@ -60,7 +60,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="5dp"
                             android:textSize="16sp"
                             android:textColor="#000000"
                             android:text="吴雄博"/>
@@ -117,7 +117,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="5dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -157,7 +157,7 @@
                     <Button
                         android:text="@string/orderChinese"
                         android:id="@+id/orderBtn"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/shape_corner"
                         android:textColor="@color/avoscloud_feedback_white"
                         android:textSize="20sp"
@@ -175,7 +175,7 @@
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:background="@drawable/border"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 >
 
                 <TextView
@@ -255,14 +255,14 @@
                                 <LinearLayout
                                     android:orientation="horizontal"
                                     android:layout_width="match_parent"
-                                    android:layout_height="192dp"
+                                    android:layout_height="162dp"
                                     android:gravity="center_vertical">
 
                                     <LinearLayout
                                         android:orientation="vertical"
                                         android:layout_width="0dp"
                                         android:layout_weight="0.5"
-                                        android:layout_height="160dp"
+                                        android:layout_height="130dp"
                                         android:layout_marginLeft="16dp"
                                         android:layout_marginRight="4dp"
                                         >
@@ -284,15 +284,15 @@
                                             android:textSize="14sp"
                                             android:textColor="#747474"
                                             android:ellipsize="end"
-                                            android:maxLines="4"  />
+                                            android:maxLines="3"  />
                                     </LinearLayout>
 
                                     <ImageView
                                         android:layout_width="0dp"
-                                        android:layout_height="160dp"
+                                        android:layout_height="130dp"
                                         android:layout_weight="0.5"
                                         android:scaleType="centerCrop"
-                                        android:src="@drawable/rollviewpic3"
+                                        android:src="@drawable/rollviewpic2"
                                         android:id="@+id/imageView"
                                         android:layout_marginRight="16dp"
                                         android:layout_marginLeft="4dp"
@@ -309,7 +309,8 @@
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="48dp"
-                                android:gravity="center_vertical">
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="5dp">
 
 
 
@@ -360,7 +361,7 @@
                 android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:background="@drawable/border"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 >
 
                 <TextView
@@ -429,7 +430,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="1dp">
+                android:layout_marginTop="5dp">
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -475,7 +476,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="1dp">
+                android:layout_marginTop="5dp">
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

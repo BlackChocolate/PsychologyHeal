@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -81,7 +80,6 @@
                         android:background="@drawable/shape_corner"
                         android:textColor="@color/avoscloud_feedback_white"
                         android:textSize="20sp"
-                        android:letterSpacing="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/loginBtn"
@@ -117,7 +115,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="24sp"
                         android:ems="10"
-                        android:id="@+id/registerPhoneNumber" />
+                        android:id="@+id/registerPhoneNumber"
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"

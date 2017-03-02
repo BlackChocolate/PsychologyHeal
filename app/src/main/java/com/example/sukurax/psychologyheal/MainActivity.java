@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         //获取第一个单选按钮，并设置其为选中状态
         RadioButton rb_home = (RadioButton) findViewById(R.id.rb_home);
         rb_home.setChecked(true);
+        
     }
 
     @Override
