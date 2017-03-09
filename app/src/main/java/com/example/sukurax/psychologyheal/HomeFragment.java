@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
@@ -19,7 +20,7 @@ import com.bigkoo.convenientbanner.holder.Holder;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.EaseConstant;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,50 +33,81 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     ImageView column,article;
+    LinearLayout article1,article2,article3,article4,article5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_home,container,false);
         initBanner(view);
+        getWidgetId(view);
+        setClickListener();
 
-        EMClient.getInstance().login("sukurax",
-                "zxczxc", new EMCallBack() {
-                    @Override
-                    public void onSuccess() {  //登录成功
-                        Log.i("lf","登录成功");
-                    }
+        return view;
+    }
 
-                    @Override
-                    public void onError(int i, String s) {  //登录失败
-                        Log.i("lf","登录失败"+i+" , "+s);
-
-                    }
-
-                    @Override
-                    public void onProgress(int i, String s) {
-
-                    }
-                });
-
-        column=(ImageView)view.findViewById(R.id.column);
+    private void setClickListener() {
         column.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(getActivity(),MyOrderActivity.class);
-                startActivity(intent);
+
             }
         });
-        article=(ImageView)view.findViewById(R.id.article);
         article.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent chat = new Intent(getActivity(),ChatActivity.class);
-                chat.putExtra(EaseConstant.EXTRA_USER_ID,"doctor");  //对方账号
-                chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
-                startActivity(chat);
+
             }
         });
-        return view;
+        article1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                intent.putExtra("whichlayout", "1");
+                startActivity(intent);
+            }
+        });
+        article2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                intent.putExtra("whichlayout", "2");
+                startActivity(intent);
+            }
+        });
+        article3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                intent.putExtra("whichlayout", "3");
+                startActivity(intent);
+            }
+        });
+        article4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                intent.putExtra("whichlayout", "4");
+                startActivity(intent);
+            }
+        });
+        article5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                intent.putExtra("whichlayout", "5");
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void getWidgetId(View view) {
+        column=(ImageView)view.findViewById(R.id.column);
+        article=(ImageView)view.findViewById(R.id.article);
+
+        article1=(LinearLayout)view.findViewById(R.id.article1);
+        article2=(LinearLayout)view.findViewById(R.id.article2);
+        article3=(LinearLayout)view.findViewById(R.id.article3);
+        article4=(LinearLayout)view.findViewById(R.id.article4);
+        article5=(LinearLayout)view.findViewById(R.id.article5);
     }
 
     private void initBanner(View view) {
@@ -95,7 +127,7 @@ public class HomeFragment extends Fragment {
         },bannerImgList)//bannerImgList,必须存储的是int型的图片id,否则出现ClassCastException
 
                 //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设,第一个是指示器初始化状态，第二个是获得焦点后的
-                .setPageIndicator(new int[]{R.drawable.whitepoint, R.drawable.bluepoint})
+                .setPageIndicator(new int[]{R.drawable.whitepoint, R.drawable.redpoint})
                 .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL) //设置指示器的方向(左中右)
                 .setPointViewVisible(true)    //设置指示器是否可见
                 .startTurning(6000);     //设置自动切换（同时设置了切换时间间隔）

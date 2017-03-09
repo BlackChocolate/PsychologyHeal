@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/colorAccent"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+
+                <ImageView
+                    android:id="@+id/articleBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/arrowback"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/column"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="从上瘾到治愈：数字成瘾诊断报告"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingTop="3dp">
+
+                    <com.example.sukurax.psychologyheal.XCRoundImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/doctorpic" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="0.9"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="吴雄博"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/roundborder_76ff03"
+                                    android:padding="2dp"
+                                    android:text="生活"
+                                    android:textColor="#76ff03"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="2017.03.02 字数2053 阅读1023 评论3 喜欢21"
+                            android:textColor="#747474"
+                            android:textSize="8sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp">
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_border_40c4ff"
+                            android:text="关注"
+                            android:textColor="#00bbd3"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:src="@drawable/rollviewpic2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="关于成瘾，传统的解释大约是这样： 为了好好活下去，我们进化出了一种特殊的大脑机制，叫做「奖励回路」。
+\n\n当我们做了对生存来说比较重要的事情时，比如吃饭、做爱、运动、吹牛逼（获取地位）、买买买（积累资源）时，这个大脑机制就会生成一种叫做多巴胺的物质，让我们「爽」。于是我们就会想要重复做这些对人类生存有意义的事情，人类也就得以繁衍生息。
+\n\n通过大脑扫描研究，科学家们认为这个所谓的「奖励回路」就在大脑的纹状体（Striatum）中，叫做「伏隔核」。如果把老鼠的这个脑区接上电路，使老鼠压动杠杆时产生电流刺激它，老鼠就会不吃不喝一直按动这个扛杆。加州大学洛杉矶分校最近发表一篇论文，通过核磁共振扫描证明了学生们在看到自己的图片被点赞之后，伏隔核像灯泡一样亮了起来，与抽烟赌博吃巧克力一样。
+\n\n至于成瘾，则是因为有一些物质会绕过这些健康的生命机制，直接刺激大脑，产生大量的多巴胺，于是人类爽到极点，从此曾经沧海难为水，其它的爽都不再爽，只有毒品（或病毒或酒精）才是真的爽。并且大脑越来越适应这种爽，所以为了找回原来的感觉成瘾者不得不加大剂量，然后就像那只老鼠一样不吃不喝地直到爽到死（或至少严重破坏正常的生活和工作）。
+\n\n如果说药物是「化学黑客」，绕过了正常的脑回路直接产生最纯粹的「爽」，那么我们现在生活在一个充满了「行为黑客」的时代，像赌博机或电子游戏这样的东西，就是在充分了解心理学的基础之上，绕过对生命有真正作用的活动，用最简单的路径在大脑中激发「爽」的感觉。
+\n\n所以，你有成瘾吗？ 这里奉上诊断标准：
+\n痴迷：痴迷于游戏（例如，经常回味过这去的游戏体验、花时间想象下一次游戏）
+\n耐受性提高：需要玩更升的时间才能达到同样的满足
+\n失去自控力：经常想要戒掉，但总是戒不掉
+\n戒断反应：不玩游戏时坐立不安，易怒
+\n逃避：通过玩游戏来逃避某些不好的 情绪（无助感、罪恶感、焦虑感，抑郁）
+\n追逐：某一天玩输了后，希望再玩一次「赢回来」
+\n欺骗：在游戏的痴迷程度上向家人或医师说谎
+\n不法行为：为了玩游戏而进行不法行为（如造假、偷盗）
+\n威胁到人际关系：因为游戏影响到重要的人际关系，影响到工作、教育或职业机会
+\n需要救助：因为游戏影响导致生活需要他人救助
+\n\n上面实际上是《美国精神障碍诊断与统计手册》第 4 版（DSM–4） 中对于赌博成瘾的诊断标准，只不过把所有的「赌博」换成了「游戏」。同样，也可以换成朋友圈、手机、色情网站，看看自己满足几条？我想大多数人没有达到这个标准吧。
+\n\n沉迷一下又有何不可？ 明天上班，产品还要跟技术撕逼，设计还要跟市场矫情，销售还要跟客户赔笑，生活还要继续。"
+                        android:textColor="#424242"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/orderBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_fe4051"
+                    android:elevation="3dp"
+                    android:text="喜欢"
+                    android:textColor="#FE4051"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/privateChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_ff5722_fill"
+                    android:elevation="3dp"
+                    android:text="打赏"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_40c4ff_fill"
+                    android:elevation="3dp"
+                    android:text="@string/followChinese"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!--评论题头-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="评论"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/More"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--评论2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/pictest" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="安连华"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="3小时前"
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="孩子一直想打游戏，不想学习，是不是上瘾了呢？"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--评论3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/pictest" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="傅丰元"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="5小时前"
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="更加常见的「赌场」，其实是网吧。以前无法理解大家为什么家里有电脑了还要去网吧玩游戏，这下理解了。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--评论1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/doctorpic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="吴雄博"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="10小时前"
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="我新发布了一篇文章，快来看看吧"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -11,7 +11,7 @@
     <string name="paper">测试</string>
     <string name="man">我的</string>
     <string name="brilliantColumn">精彩专栏</string>
-    <string name="more"><![CDATA[更多 >]]></string>
+    <string name="more"><![CDATA[ >]]></string>
     <string name="brilliantCircle">精选圈子</string>
     <string name="brilliantArticle">精选文章</string>
     <string name="PhoneNumberChinese">手机号</string>
@@ -38,6 +38,8 @@
     <string name="commentChinese">咨询</string>
     <string name="createOrderChinese">创建预约订单</string>
     <string name="MyOrderChinese">我的订单</string>
+    <string name="homeChinese">主页</string>
+    <string name="heartChinses">咨询</string>
     <string-array name="optional_array">
         <item>生活</item>
         <item>学习</item>

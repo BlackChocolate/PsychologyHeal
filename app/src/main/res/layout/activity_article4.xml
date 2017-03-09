@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/colorAccent"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+
+                <ImageView
+                    android:id="@+id/articleBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/arrowback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/circle"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="人生最大的悲哀，莫过于问一个要不到的人要爱"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingTop="3dp">
+
+                    <com.example.sukurax.psychologyheal.XCRoundImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/pictest" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="0.9"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="匿名"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/roundborder_ab47bc"
+                                    android:padding="2dp"
+                                    android:text="亲情"
+                                    android:textColor="#ab47bc"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="2017.03.05 字数1353 阅读623 评论2 喜欢36"
+                            android:textColor="#747474"
+                            android:textSize="8sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp">
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_border_40c4ff"
+                            android:text="关注"
+                            android:textColor="#00bbd3"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我能想到的人生最悲哀的事，莫过于问一个要不到的人一直要爱。那感觉就像是面对一个刚在车祸中失去双腿的人，你很心疼他，你拼命摇晃着他的身体，向他呐喊着：你倒是跑起来啊，跑啊。你昨天不是还跑得好好的吗？今天怎么不跑了啊！人家都能好好的跑，你为什么不能啊！！
+\n\n
+那人的腿伤没有因此减少半分，还要承受你的责怪、摇晃和吼叫。
+\n\n
+你可以问别人要爱。
+\n\n
+在你的身边，其实有很多人愿意支持你，关注你，理解你，帮助你。朋友、陌生人和我都愿意。比如说我，你只需要付一点点费用，就可以得到我很多理解、关注和爱。
+\n\n
+然而你可能会看不上，你觉得那是暂时的、用钱买来的。那是因为你想要的是：永久的、无私的爱。这个标准来看，最爱的人也是给不了你的。
+\n\n
+我与你最爱的人并没有多大差别。不过是我能给2分，时间短点、需要付费来换，你不要。爱人能给你4分，时间久一点、需要用你的爱来换，你也不要。朋友能给的是2分，你更觉得那些支持、关注都太不够。
+\n\n
+10分之下，来自于丛、陌生人、朋友和不完美的爱人，你通通不要，你觉得这些太微薄而忽视掉。
+\n\n
+人生痛苦的就是：别人给的爱你都看不上，你只想要他给而且只能给10分。
+\n\n
+更痛苦的是：你从来不觉得你的要求是10分那么多，你只想要一个“正常”。
+\n\n
+你可能会觉得：其他人能给你的爱，都不及他能给的重要。可是他此刻给不了你，你连别人的也都不要了吗？他给不了你10分，你连他能给的4分都不要了吗？
+\n\n
+不要为失去月亮而愤怒，不然你就真的连星星都没有了。
+\n\n
+虽然100个星星都不及月亮明亮。但是月亮，不能所有时候都在。月亮，可能终生都没有你要的明亮。
+\n\n
+你想要的“正常”的爱是没有的。很遗憾。不是态度问题，不是意愿问题，不是爱不爱你的问题，只是能力问题。在他的世界里，他能做到的只有这么多。
+\n\n
+接纳这个事实的过程，就是哀伤。
+\n\n
+你需要经历这个哀伤，接纳事实就是如此，你需要面对现实，需要长大。你需要承认：是的，有时候他就是给不了你。
+\n\n
+失望，是成熟的必经之路。
+\n\n
+失望过后，放弃不可能的幻想，珍惜所能得到的现在，就是成长。
+\n\n
+然后你可以再问自己几个问题：
+\n\n
+如果他真的满足不了我这个基本的要求了，那我该怎么活下去呢？他其他地方还有值得我跟他在一起的地方吗？我可以为这件事做些什么呢？我还可以为自己做些什么呢？
+\n\n
+接下来你能做的一切，都是爱自己。
+\n\n
+爱自己不仅是自己满足自己。更是问能要到的人要，放过要不到的人。要能要到的部分，放弃对要不到的部分的执着，这就是爱自己。
+\n\n
+当然，如果你认为通过抱怨、要求、努力、指责等方式可以要到，那么，
+\n\n
+God and I, bless u."
+                        android:textColor="#424242"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/orderBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_fe4051"
+                    android:elevation="3dp"
+                    android:text="喜欢"
+                    android:textColor="#FE4051"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/privateChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_ff5722_fill"
+                    android:elevation="3dp"
+                    android:text="打赏"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_40c4ff_fill"
+                    android:elevation="3dp"
+                    android:text="@string/followChinese"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!--评论题头-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="评论"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/More"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--评论2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/pictest" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xinli_7773"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="2小时前 "
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="我觉得说的特别好，很受用，我跟我前男友就是这样，因为对他外在的地方不满意，所以他有些事情没有做到我就抱怨，苛责，失望，现在想想却是不应该，恋爱中的两个人是平等的，不能要求别人做什么什么，只要自己做到，做好，相信幸福会来的"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--评论3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/pictest" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ᵒᴥᵒ"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="19小时前"
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="爱而不得"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

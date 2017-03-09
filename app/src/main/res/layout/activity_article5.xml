@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/colorAccent"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+
+                <ImageView
+                    android:id="@+id/articleBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/arrowback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/article"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="为什么你想学却学不进去？"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingTop="3dp">
+
+                    <com.example.sukurax.psychologyheal.XCRoundImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/doctorpic3" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="0.9"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="赵小若"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/roundborder_8bc34a"
+                                    android:padding="2dp"
+                                    android:text="学习"
+                                    android:textColor="#8BC34A"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="2017.03.05 字数1053 阅读755 评论1 喜欢45"
+                            android:textColor="#747474"
+                            android:textSize="8sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp">
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_border_40c4ff"
+                            android:text="关注"
+                            android:textColor="#00bbd3"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:src="@drawable/article5" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="几乎所有人都希望自己成长，几乎所有人都知道成长需要学习，而且确实很多人在寻求知识，希望成长。
+\n\n
+但如何才能真正成长？先来看看生活中的现象。
+\n\n
+当杯子装满水，我们说这是水；
+\n\n
+当杯子装满茶，我们说这是茶；
+\n\n
+当杯子装满酒，我们说这是酒；
+\n\n
+只有当杯子什么都不装，我们才说这是杯子。
+\n\n
+我们自己内心装满了什么，我们就是什么。当我们内心充满追逐金钱、追逐名利、追逐成功时，我们就迷失了自己。我们的心里能倒空一点么？
+\n\n
+有人说，有点玄乎看不懂。那我们来看个简单的。
+\n\n
+从前有一个小有名气的才子，总想学大道理。听说有一老和尚懂得许多大道理，于是上门拜访。到寺庙后老和尚让他上午挑水、下午砍材，别无它事。才子很听话，一月过去了，才子忍不住说：师傅，你教我一些大道理啊。
+\n\n
+老和尚说：那你上午砍材，下午挑水。又过了一个月，才子心想：师傅不愿意教我，尽让我做一些没用的，我还是去别的地方学吧。
+\n\n
+才子找到老和尚说：师傅，家里有点事，我还是回家去算了。
+\n\n
+老和尚说：好啊我送送你。送其至山下，路遇一凉亭，老和尚给才子倒茶，杯满后仍未停。
+\n\n
+才子说：杯子满了，茶倒进不去了。
+\n\n
+老和尚说：人也是如此。
+\n\n
+这个才子很爱学习吧，老和尚为什么不肯教他么？哦，不，老和尚没教他么？有人说这个故事我之前看过，但这个故事值得回味，多看几遍不为过。
+\n\n
+很多人是希望来学习，愿望特别好，但心里总是装了很多东西，然后什么也没有学到，最后还义愤填膺的说，别人不教他。
+\n\n
+不知道大家有没有这种感觉，我们有时候特别浮躁，也很功利！我们看看书店里面的书名：《＊＊＊教你成功》, 《股市赚钱秘籍》，《1分钟读懂对方心理》，《致富宝典》……扯远了，就拿看文章来说，如果标题中写《鬼脚七揭秘搜索规则》《鬼脚七告诉你优化秘诀》《直通车省钱宝典》，这些标题一定是很多人最爱看的。那位要取消关注的朋友，可能也只是希望看见这些文章。
+\n\n
+其实功利没有什么不好，就像认识淘宝小二一样，有个朋友说得很有意思：
+\n\n
+有人说我太功利，认识淘宝小二总是想套点资源拉点关系。我就是如此，难不成我认识个淘宝小二是希望跟 TA 谈理想谈人生谈恋爱么？
+\n\n
+功利是让我们寻找捷径的动力，但如果浮躁和功利加在一起，我们就容易被自己迷惑了。我们看上去想学习，实际上学不进去任何东西。
+\n\n
+谦虚是内心真正认识到自己的不足，而不是嘴上冠冕堂皇的理由。
+\n\n
+如果真正懂得了谦虚，真正理解了什么是空杯，行动就是顺其自然的事情。"
+                        android:textColor="#424242"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/orderBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_fe4051"
+                    android:elevation="3dp"
+                    android:text="喜欢"
+                    android:textColor="#FE4051"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/privateChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_ff5722_fill"
+                    android:elevation="3dp"
+                    android:text="打赏"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.33"
+                    android:background="@drawable/shape_corner_40c4ff_fill"
+                    android:elevation="3dp"
+                    android:text="@string/followChinese"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!--评论题头-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="评论"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/More"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <!--评论3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite"
+                android:padding="8dp">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/pictest" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kayl"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="四日前"
+                            android:textColor="#747474"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="文章写的道理是有点对，是有那么一群人心里装的太多，融不进别的东西，可还不自知，总是很愚直的认为只要继续学习可以解决万事。这是不了解客观自己的人总会有的想法。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

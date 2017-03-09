@@ -170,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="36dp"
             android:text="立即评价"
-            android:background="@drawable/btn_border_00bbd3"
+            android:background="@drawable/btn_border_40c4ff"
             android:textColor="#00bbd3"
             android:textSize="16sp"
             android:layout_marginRight="16dp"

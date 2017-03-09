@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     RadioButton[] rb;
     //Fragment Object
     HomeFragment fg1;
+    CircleFragment fg2;
     HeartFragment fg3;
-    private MyFragment fg2,fg4,fg5;
+    ManFragment fg5;
+    private MyFragment fg4;
     private FragmentManager fManager;
 
     @Override
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_circle:
                 if(fg2 == null){
-                    fg2 = new MyFragment("圈子界面完善中");
+                    fg2 = new CircleFragment();
                     fTransaction.add(R.id.ly_content,fg2);
                 }else{
                     fTransaction.show(fg2);
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.rb_man:
                 if(fg5 == null){
-                    fg5 = new MyFragment("我的界面完善中");
+                    fg5 = new ManFragment();
                     fTransaction.add(R.id.ly_content,fg5);
                 }else{
                     fTransaction.show(fg5);

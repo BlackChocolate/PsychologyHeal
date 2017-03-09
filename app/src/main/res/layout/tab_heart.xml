@@ -14,46 +14,73 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/colorAccent"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+
+                <ImageView
+                    android:id="@+id/settingBtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/heartChinses"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </android.support.v7.widget.Toolbar>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="wrap_content"
+                android:background="#EEEEEE"
                 android:orientation="horizontal"
-                android:background="@color/colorAccent"
                 android:padding="8dp">
 
                 <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:background="?attr/colorPrimary"
-                    android:theme="?attr/actionBarTheme"
                     android:minHeight="?attr/actionBarSize"
-                    android:id="@+id/toolbar2">
+                    android:theme="?attr/actionBarTheme">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                         <SearchView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="-15dp"/>
+                            android:layout_marginLeft="-15dp" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_weight="0.9"
                             android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
                             android:hint="搜索专栏、圈子、文章"
-                            android:textSize="14sp"
-                            android:textColor="#747474"/>
+                            android:textColor="#747474"
+                            android:textSize="14sp" />
+
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_weight="0.1"
                             android:layout_height="20dp"
                             android:layout_marginRight="16dp"
-                            android:src="@drawable/recording"/>
+                            android:layout_weight="0.1"
+                            android:src="@drawable/recording" />
 
                     </LinearLayout>
 
@@ -62,620 +89,625 @@
 
             <!--预约专栏题头-->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="center_vertical"
+                android:layout_height="28dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/border"
-                >
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:text="@string/orderingChinese"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:layout_weight="1"
+                    android:text="预约"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:text="@string/more"
-                    android:id="@+id/orderingMore"
+                    android:id="@+id/More"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
-
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
             </LinearLayout>
             <!--内容-->
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor1"
+                >
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
-                    <android.support.v7.widget.CardView
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="toDoctorIfo"
-                        >
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:padding="16dp"
-                            android:layout_height="88dp">
-
-                            <com.example.sukurax.psychologyheal.XCRoundImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"/>
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="16dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="吴雄博"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
-从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
-                                    android:textSize="14sp"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:textColor="#747474"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="0dp">
+                        android:layout_height="wrap_content">
 
                         <!--预约底部-->
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="吴雄博"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/eye"
-                                android:layout_marginLeft="16dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="123555"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="12555"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
+
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/good"
-                                android:layout_marginLeft="4dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1235"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="236"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
+从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
+
+
 
             <!--同城题头-->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="center_vertical"
-                android:background="@drawable/border"
+                android:layout_height="28dp"
                 android:layout_marginTop="5dp"
-                >
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:text="@string/sameCityChinese"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:layout_weight="1"
+                    android:text="同城"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:text="@string/more"
-                    android:id="@+id/sameCityMore"
+                    android:id="@+id/More"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
-
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
             </LinearLayout>
-            <!--内容-->
+            <!--内容1-->
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor2">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic2" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="toDoctorIfo"
-                        card_view:cardCornerRadius="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:padding="16dp"
-                            android:layout_height="88dp">
-
-                            <com.example.sukurax.psychologyheal.XCRoundImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"
-                                />
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="16dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="吴雄博"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
-从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
-                                    android:textSize="14sp"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:textColor="#747474"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="0dp">
+                        android:layout_height="wrap_content">
 
                         <!--预约底部-->
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="林立洲"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/eye"
-                                android:layout_marginLeft="16dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="123555"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="4654"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
+
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/good"
-                                android:layout_marginLeft="4dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1235"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="35"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="擅长以后现代家庭治疗和叙事治疗解决婚姻家庭、亲子关系、个人成长等方面的问题。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
-            <!--内容-->
+
+            <!--内容2-->
+
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp">
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor3">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic3" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="toDoctorIfo"
-                        card_view:cardCornerRadius="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:padding="16dp"
-                            android:layout_height="88dp">
-
-                            <com.example.sukurax.psychologyheal.XCRoundImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"/>
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="16dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="吴雄博"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
-从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
-                                    android:textSize="14sp"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:textColor="#747474"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="0dp">
+                        android:layout_height="wrap_content">
 
                         <!--预约底部-->
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="赵小若"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/eye"
-                                android:layout_marginLeft="16dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="123555"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="346"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
+
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/good"
-                                android:layout_marginLeft="4dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1235"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="30"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="擅长孩子教育、家庭教育、考试焦虑，厌学逃学，手机、电脑网络成瘾，孩子叛逆，与孩子无法交流，志愿填报，选择专业，选择学校等。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
+
+
             <!--热门题头-->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="center_vertical"
-                android:background="@drawable/border"
+                android:layout_height="28dp"
                 android:layout_marginTop="5dp"
-                >
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:text="@string/hotChinese"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:layout_weight="1"
+                    android:text="热门"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:text="@string/more"
-                    android:id="@+id/hotMore"
+                    android:id="@+id/More"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
-
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
             </LinearLayout>
-            <!--内容-->
+            <!--内容1-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor4"
+                >
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="toDoctorIfo"
-                        card_view:cardCornerRadius="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:padding="16dp"
-                            android:layout_height="88dp">
-
-                            <com.example.sukurax.psychologyheal.XCRoundImageView
-                                android:id="@+id/brilliantColumnPic"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"/>
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="16dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="吴雄博"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
-从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
-                                    android:textSize="14sp"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:textColor="#747474"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="0dp">
+                        android:layout_height="wrap_content">
 
                         <!--预约底部-->
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="吴雄博"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/eye"
-                                android:layout_marginLeft="16dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="123555"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="12555"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
+
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/good"
-                                android:layout_marginLeft="4dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1235"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="236"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
+从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
+            <!--内容2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor5">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic2" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--预约底部-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="林立洲"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:text="4654"
+                                android:textColor="#BDBDBD"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:text="35"
+                                android:textColor="#BDBDBD"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="擅长以后现代家庭治疗和叙事治疗解决婚姻家庭、亲子关系、个人成长等方面的问题。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
             <!--领域题头-->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="center_vertical"
-                android:background="@drawable/border"
+                android:layout_height="28dp"
                 android:layout_marginTop="5dp"
-                >
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <Spinner
+                        android:id="@+id/spinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/spinner"
-                        android:layout_marginLeft="8dp"
-                        />
+                        android:layout_marginLeft="8dp" />
                 </LinearLayout>
 
                 <TextView
-                    android:text="@string/more"
                     android:id="@+id/optionalMore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:text="@string/more"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
 
             </LinearLayout>
             <!--内容-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="92dp"
+                android:padding="16dp"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:id="@+id/doctor6">
+
+                <com.example.sukurax.psychologyheal.XCRoundImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/doctorpic3" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="toDoctorIfo"
-                        card_view:cardCornerRadius="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:padding="16dp"
-                            android:layout_height="88dp">
-
-                            <com.example.sukurax.psychologyheal.XCRoundImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/doctorpic"/>
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginLeft="16dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="吴雄博"
-                                    android:textSize="16sp"
-                                    android:textColor="#000000"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="男，汉族，1971年生，河北医科大学毕业，中级职称，国家二级心理咨询师（职业资格证书编号：0604000008200121）；精神卫生专业（证书编码：110130100003578）； 临床医学（执业医师证书编199813110132133710709481）。
-从业简介：医学和心理学的双重理论与实践背景，从事心理咨询和心理治疗、心理学教学工作18年，有着丰富的临床经验，尤其擅长学生心理问题、婚恋家庭问题、人际关系问题、发展问题的心理咨询以及神经症的心理治疗。"
-                                    android:textSize="14sp"
-                                    android:ellipsize="end"
-                                    android:maxLines="2"
-                                    android:textColor="#747474"/>
-
-                            </LinearLayout>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        card_view:cardCornerRadius="0dp">
+                        android:layout_height="wrap_content">
 
                         <!--预约底部-->
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:gravity="center_vertical">
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="赵小若"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
 
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/eye"
-                                android:layout_marginLeft="16dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/eye" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="123555"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="346"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
+
                             <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/good"
-                                android:layout_marginLeft="4dp"/>
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/good" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1235"
-                                android:textSize="16sp"
+                                android:layout_marginLeft="4dp"
+                                android:text="30"
                                 android:textColor="#BDBDBD"
-                                android:layout_marginLeft="4dp"/>
+                                android:textSize="10sp" />
 
                         </LinearLayout>
+                    </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="擅长孩子教育、家庭教育、考试焦虑，厌学逃学，手机、电脑网络成瘾，孩子叛逆，与孩子无法交流，志愿填报，选择专业，选择学校等。"
+                        android:textColor="#424242"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
