@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE">
+    android:background="#EEEEEE"
+    android:id="@+id/chatlist">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -372,7 +373,7 @@
                 android:id="@+id/article1"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="1dp"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView

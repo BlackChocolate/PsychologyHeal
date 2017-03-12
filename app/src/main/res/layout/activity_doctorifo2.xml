@@ -157,7 +157,8 @@
                         android:elevation="3dp"
                         android:text="@string/pchatChinese"
                         android:textColor="#69F0AE"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:onClick="chatToLin"/>
 
                     <Button
                         android:id="@+id/orderBtn"

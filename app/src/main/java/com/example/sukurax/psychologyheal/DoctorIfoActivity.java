@@ -9,12 +9,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
+
 /**
  * Created by sukurax on 2017/2/12.
  */
 
 public class DoctorIfoActivity extends AppCompatActivity{
-    Button orderBtn,followBtn,privateChatBtn;
+    Button orderBtn,followBtn;
     LinearLayout doc1article,doc2article,doc3article;
     ImageView doctorIfoBackBtn;
     @Override
@@ -51,7 +54,6 @@ public class DoctorIfoActivity extends AppCompatActivity{
         orderBtn=(Button)findViewById(R.id.orderBtn);
         doctorIfoBackBtn=(ImageView)findViewById(R.id.doctorIfoBackBtn);
         followBtn=(Button)findViewById(R.id.followBtn);
-        privateChatBtn=(Button)findViewById(R.id.privateChat);
     }
     private void setClickListener() {
         orderBtn.setOnClickListener(new View.OnClickListener() {
@@ -75,13 +77,7 @@ public class DoctorIfoActivity extends AppCompatActivity{
                         Toast.LENGTH_SHORT).show();
             }
         });
-        privateChatBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "点击私信",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
 //        doc1article.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -109,4 +105,24 @@ public class DoctorIfoActivity extends AppCompatActivity{
 //            }
 //        });
     }
+
+    public void chatToWu(View view){
+        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
+        chat.putExtra(EaseConstant.EXTRA_USER_ID,"WuXiongBo");  //对方账号
+        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
+        startActivity(chat);
+    }
+    public void chatToLin(View view){
+        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
+        chat.putExtra(EaseConstant.EXTRA_USER_ID,"LinLiZhou");  //对方账号
+        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
+        startActivity(chat);
+    }
+    public void chatToZhao(View view){
+        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
+        chat.putExtra(EaseConstant.EXTRA_USER_ID,"ZhaoXiaoRuo");  //对方账号
+        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
+        startActivity(chat);
+    }
+
 }

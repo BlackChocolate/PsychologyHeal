@@ -1,6 +1,7 @@
 package com.example.sukurax.psychologyheal;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.RequestMobileCodeCallback;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+
 
 import java.util.Objects;
 
@@ -131,37 +133,31 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void done(AVUser avUser, AVException e) {
                             if(e==null){
-                                Intent intent=new Intent();
-                                intent.setClass(LoginActivity.this,MainActivity.class);
-                                startActivity(intent);
+                                EMClient.getInstance().login(loginusername,loginpassword,new EMCallBack() {//回调
+                                    @Override
+                                    public void onSuccess() {
+                                        EMClient.getInstance().groupManager().loadAllGroups();
+                                        EMClient.getInstance().chatManager().loadAllConversations();
+                                        Log.d("lg", "登录聊天服务器成功！");
+                                        Intent intent=new Intent();
+                                        intent.setClass(LoginActivity.this,MainActivity.class);
+                                        startActivity(intent);
+                                    }
+
+                                    @Override
+                                    public void onProgress(int progress, String status) {
+
+                                    }
+
+                                    @Override
+                                    public void onError(int code, String message) {
+                                        Log.d("lg", "登录聊天服务器失败！");
+                                    }
+                                });
                             }else{
                                 String temp[] = e.toString().split("\"");
                                 Toast.makeText(getApplicationContext(), temp[temp.length-2],
                                         Toast.LENGTH_SHORT).show();
-                                if(Objects.equals(temp[temp.length - 2], "登录成功")){
-
-                                    EMClient.getInstance().login("sukurax",
-                                            "zxczxc", new EMCallBack() {
-                                                @Override
-                                                public void onSuccess() {  //登录成功
-                                                    Log.i("lf","登录成功");
-                                                    Intent intent=new Intent();
-                                                    intent.setClass(LoginActivity.this,MainActivity.class);
-                                                    startActivity(intent);
-                                                }
-
-                                                @Override
-                                                public void onError(int i, String s) {  //登录失败
-                                                    Log.i("lf","登录失败"+i+" , "+s);
-
-                                                }
-
-                                                @Override
-                                                public void onProgress(int i, String s) {
-
-                                                }
-                                            });
-                                }
                             }
                         }
                     });

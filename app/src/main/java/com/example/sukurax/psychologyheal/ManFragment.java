@@ -11,11 +11,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
-//import com.hyphenate.chat.EMConversation;
-//import com.hyphenate.chat.EMMessage;
-//import com.hyphenate.easeui.EaseConstant;
-//import com.hyphenate.easeui.ui.EaseChatFragment;
-//import com.hyphenate.easeui.ui.EaseConversationListFragment;
+import com.hyphenate.chat.EMChatManager;
+import com.hyphenate.chat.EMConversation;
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
+import com.hyphenate.easeui.ui.EaseConversationListFragment;
 
 
 /**
@@ -46,10 +46,9 @@ public class ManFragment extends Fragment {
         xiaoxi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent chat = new Intent(getActivity(),ChatActivity.class);
-//                chat.putExtra(EaseConstant.EXTRA_USER_ID,"doctor");  //对方账号
-//                chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
-//                startActivity(chat);
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), ChatListFragmentActivity.class);
+                startActivity(intent);
             }
         });
         article1.setOnClickListener(new View.OnClickListener() {
