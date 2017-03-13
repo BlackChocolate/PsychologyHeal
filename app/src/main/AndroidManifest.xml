@@ -61,9 +61,15 @@
         <activity android:name=".OrderActivity"/>
         <activity android:name=".MyOrderActivity"/>
         <activity android:name=".ChatActivity"/>
-        <activity android:name=".ArticleActivity" />
+        <activity android:name=".ArticleContentActivity" />
         <activity android:name=".CircleFragment"/>
         <activity android:name=".ChatListFragmentActivity"/>
+        <activity android:name=".ColumnActivity"/>
+        <activity android:name=".ArticleActivity"/>
+        <activity android:name=".CollectionActivity"/>
+        <activity android:name=".CircleActivity"/>
+        <activity android:name=".TestActivity"/>
+        <activity android:name=".FollowActivity"/>
 
         <!-- 设置环信应用的AppKey -->
         <meta-data android:name="EASEMOB_APPKEY"  android:value="1162170302178243#psychologyheal" />

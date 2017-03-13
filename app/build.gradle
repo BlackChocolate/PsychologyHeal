@@ -35,6 +35,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.2.0'
     testCompile 'junit:junit:4.12'
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.6.0'
     // LeanCloud 基础包
     compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
     // 推送与实时聊天需要的包
@@ -54,4 +55,6 @@ dependencies {
     compile 'com.lapism:searchview:4.0'
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile project(path: ':easeui')
+    compile files('libs/showapi_sdk.jar')
+    compile 'com.google.code.gson:gson:2.7'
 }

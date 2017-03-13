@@ -3,23 +3,16 @@ package com.example.sukurax.psychologyheal;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.hyphenate.EMCallBack;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMMessage;
 
 
 import java.util.ArrayList;
@@ -32,7 +25,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    ImageView column,article;
+    ImageView column,article,test;
     LinearLayout article1,article2,article3,article4,article5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,19 +41,29 @@ public class HomeFragment extends Fragment {
         column.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent =new Intent(getActivity(),ColumnActivity.class);
+                startActivity(intent);
             }
         });
         article.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                startActivity(intent);
             }
         });
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getActivity(),TestActivity.class);
+                startActivity(intent);
+            }
+        });
+
         article1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "1");
                 startActivity(intent);
             }
@@ -68,7 +71,7 @@ public class HomeFragment extends Fragment {
         article2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "2");
                 startActivity(intent);
             }
@@ -76,7 +79,7 @@ public class HomeFragment extends Fragment {
         article3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "3");
                 startActivity(intent);
             }
@@ -84,7 +87,7 @@ public class HomeFragment extends Fragment {
         article4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "4");
                 startActivity(intent);
             }
@@ -92,7 +95,7 @@ public class HomeFragment extends Fragment {
         article5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "5");
                 startActivity(intent);
             }
@@ -102,6 +105,7 @@ public class HomeFragment extends Fragment {
     private void getWidgetId(View view) {
         column=(ImageView)view.findViewById(R.id.column);
         article=(ImageView)view.findViewById(R.id.article);
+        test=(ImageView)view.findViewById(R.id.test);
 
         article1=(LinearLayout)view.findViewById(R.id.article1);
         article2=(LinearLayout)view.findViewById(R.id.article2);
@@ -137,7 +141,7 @@ public class HomeFragment extends Fragment {
         // banner.setManualPageable(false);//设置不能手动影响，即无法手势滑动
     }
 
-    public class LocalImageHolderView implements Holder<Integer> {
+    private class LocalImageHolderView implements Holder<Integer> {
         private ImageView imageView;
         @Override
         public View createView(Context context) {

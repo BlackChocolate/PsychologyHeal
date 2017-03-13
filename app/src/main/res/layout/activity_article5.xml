@@ -130,16 +130,18 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:gravity="center"
-                        android:paddingBottom="7dp"
-                        android:paddingTop="7dp">
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
 
                         <Button
-                            android:layout_width="60dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_border_40c4ff"
+                            android:background="@drawable/shape_corner_40c4ff_fill"
                             android:text="关注"
-                            android:textColor="#00bbd3"
-                            android:textSize="10sp" />
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp"
+                            android:onClick="followDoctor"
+                            android:tag="ZhaoXiaoRuo"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -166,6 +168,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
                         android:text="几乎所有人都希望自己成长，几乎所有人都知道成长需要学习，而且确实很多人在寻求知识，希望成长。
 \n\n
 但如何才能真正成长？先来看看生活中的现象。
@@ -247,17 +251,6 @@
                     android:text="打赏"
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/followBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_weight="0.33"
-                    android:background="@drawable/shape_corner_40c4ff_fill"
-                    android:elevation="3dp"
-                    android:text="@string/followChinese"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="20sp" />
             </LinearLayout>
 
 
@@ -293,10 +286,12 @@
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"

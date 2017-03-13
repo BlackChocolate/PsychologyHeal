@@ -6,16 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-
-import com.hyphenate.chat.EMChatManager;
-import com.hyphenate.chat.EMConversation;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.EaseConstant;
-import com.hyphenate.easeui.ui.EaseConversationListFragment;
 
 
 /**
@@ -23,7 +15,7 @@ import com.hyphenate.easeui.ui.EaseConversationListFragment;
  */
 
 public class ManFragment extends Fragment {
-    ImageView dingdan,xiaoxi;
+    ImageView dingdan,xiaoxi,collect,circle,follow;
     LinearLayout article1,article3,article5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,10 +43,35 @@ public class ManFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        collect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), CollectionActivity.class);
+                startActivity(intent);
+            }
+        });
+        circle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), CircleActivity.class);
+                startActivity(intent);
+            }
+        });
+        follow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), FollowActivity.class);
+                startActivity(intent);
+            }
+        });
+
         article1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "1");
                 startActivity(intent);
             }
@@ -62,7 +79,7 @@ public class ManFragment extends Fragment {
         article3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "3");
                 startActivity(intent);
             }
@@ -70,7 +87,7 @@ public class ManFragment extends Fragment {
         article5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "5");
                 startActivity(intent);
             }
@@ -80,10 +97,15 @@ public class ManFragment extends Fragment {
     private void getWidgetId(View view) {
         dingdan=(ImageView)view.findViewById(R.id.dingdan);
         xiaoxi=(ImageView)view.findViewById(R.id.xiaoxi);
+        collect=(ImageView)view.findViewById(R.id.collect);
+        circle=(ImageView)view.findViewById(R.id.circle);
+        follow=(ImageView)view.findViewById(R.id.follow);
 
         article1=(LinearLayout)view.findViewById(R.id.article1);
         article3=(LinearLayout)view.findViewById(R.id.article3);
         article5=(LinearLayout)view.findViewById(R.id.article5);
+
+
     }
 
     private void innerView(View view) {

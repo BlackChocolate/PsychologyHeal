@@ -28,8 +28,7 @@
                     android:id="@+id/articleBackBtn"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/arrowback"
-                    />
+                    android:src="@drawable/arrowback" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,7 +68,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="1dp"
-                    android:paddingTop="3dp">
+                    android:paddingTop="3dp"
+                    >
 
                     <com.example.sukurax.psychologyheal.XCRoundImageView
                         android:layout_width="36dp"
@@ -131,16 +131,18 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:gravity="center"
-                        android:paddingBottom="7dp"
-                        android:paddingTop="7dp">
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
 
                         <Button
-                            android:layout_width="60dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_border_40c4ff"
+                            android:background="@drawable/shape_corner_40c4ff_fill"
                             android:text="关注"
-                            android:textColor="#00bbd3"
-                            android:textSize="10sp" />
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp"
+                            android:onClick="followDoctor"
+                            android:tag="WuXiongBo"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -166,7 +168,9 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
                         android:text="关于成瘾，传统的解释大约是这样： 为了好好活下去，我们进化出了一种特殊的大脑机制，叫做「奖励回路」。
 \n\n当我们做了对生存来说比较重要的事情时，比如吃饭、做爱、运动、吹牛逼（获取地位）、买买买（积累资源）时，这个大脑机制就会生成一种叫做多巴胺的物质，让我们「爽」。于是我们就会想要重复做这些对人类生存有意义的事情，人类也就得以繁衍生息。
 \n\n通过大脑扫描研究，科学家们认为这个所谓的「奖励回路」就在大脑的纹状体（Striatum）中，叫做「伏隔核」。如果把老鼠的这个脑区接上电路，使老鼠压动杠杆时产生电流刺激它，老鼠就会不吃不喝一直按动这个扛杆。加州大学洛杉矶分校最近发表一篇论文，通过核磁共振扫描证明了学生们在看到自己的图片被点赞之后，伏隔核像灯泡一样亮了起来，与抽烟赌博吃巧克力一样。
@@ -204,7 +208,7 @@
                     android:id="@+id/orderBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
-                    android:layout_weight="0.33"
+                    android:layout_weight="0.5"
                     android:background="@drawable/shape_corner_fe4051"
                     android:elevation="3dp"
                     android:text="喜欢"
@@ -217,21 +221,10 @@
                     android:layout_height="36dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:layout_weight="0.33"
+                    android:layout_weight="0.5"
                     android:background="@drawable/shape_corner_ff5722_fill"
                     android:elevation="3dp"
                     android:text="打赏"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/followBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_weight="0.33"
-                    android:background="@drawable/shape_corner_40c4ff_fill"
-                    android:elevation="3dp"
-                    android:text="@string/followChinese"
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -268,10 +261,12 @@
             <!--评论2-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -320,10 +315,12 @@
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -372,10 +369,12 @@
             <!--评论1-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -383,8 +382,8 @@
                     android:src="@drawable/doctorpic" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
                     android:orientation="vertical">
 

@@ -144,7 +144,9 @@
                         android:elevation="3dp"
                         android:text="@string/followChinese"
                         android:textColor="#40C4FF"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:onClick="followDoctor"
+                        android:tag="ZhaoXiaoRuo"/>
 
                     <Button
                         android:id="@+id/privateChat"
@@ -203,6 +205,7 @@
 
             <LinearLayout
                 android:id="@+id/doc3article"
+                android:onClick="toArticle5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -363,10 +366,12 @@
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"

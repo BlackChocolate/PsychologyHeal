@@ -135,6 +135,8 @@
                         android:layout_height="36dp"
                         android:layout_marginRight="4dp"
                         android:elevation="3dp"
+                        android:onClick="followDoctor"
+                        android:tag="WuXiongBo"
                         />
 
                     <Button
@@ -197,6 +199,7 @@
             <!--精彩专栏内容1-->
             <LinearLayout
                 android:id="@+id/doc1article"
+                android:onClick="toArticle1"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
                 android:layout_marginTop="3dp"
@@ -361,8 +364,10 @@
             <!--评论1-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:padding="8dp"
+                android:layout_height="50dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:background="@color/colorWhite">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView

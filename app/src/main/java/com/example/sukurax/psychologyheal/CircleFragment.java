@@ -3,7 +3,6 @@ package com.example.sukurax.psychologyheal;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +29,7 @@ public class CircleFragment extends Fragment {
         article3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "3");
                 startActivity(intent);
             }
@@ -38,7 +37,7 @@ public class CircleFragment extends Fragment {
         article4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "4");
                 startActivity(intent);
             }
@@ -46,7 +45,7 @@ public class CircleFragment extends Fragment {
         article5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(),ArticleActivity.class);
+                Intent intent =new Intent(getActivity(),ArticleContentActivity.class);
                 intent.putExtra("whichlayout", "5");
                 startActivity(intent);
             }

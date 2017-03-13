@@ -120,11 +120,5 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         if(fg5 != null)fragmentTransaction.hide(fg5);
     }
 
-    public void toDoctorIfo(View view) {
-        Intent intent = new Intent();
-        intent.setClass(this, DoctorIfoActivity.class);
-        startActivity(intent);
-    }
-
 
 }

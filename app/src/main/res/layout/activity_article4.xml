@@ -130,16 +130,18 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:gravity="center"
-                        android:paddingBottom="7dp"
-                        android:paddingTop="7dp">
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
 
                         <Button
-                            android:layout_width="60dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_border_40c4ff"
+                            android:background="@drawable/shape_corner_40c4ff_fill"
                             android:text="关注"
-                            android:textColor="#00bbd3"
-                            android:textSize="10sp" />
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp"
+                            android:onClick="followDoctor"
+                            android:tag="NiMing"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -152,6 +154,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
                         android:text="我能想到的人生最悲哀的事，莫过于问一个要不到的人一直要爱。那感觉就像是面对一个刚在车祸中失去双腿的人，你很心疼他，你拼命摇晃着他的身体，向他呐喊着：你倒是跑起来啊，跑啊。你昨天不是还跑得好好的吗？今天怎么不跑了啊！人家都能好好的跑，你为什么不能啊！！
 \n\n
 那人的腿伤没有因此减少半分，还要承受你的责怪、摇晃和吼叫。
@@ -235,17 +239,6 @@ God and I, bless u."
                     android:text="打赏"
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/followBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_weight="0.33"
-                    android:background="@drawable/shape_corner_40c4ff_fill"
-                    android:elevation="3dp"
-                    android:text="@string/followChinese"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="20sp" />
             </LinearLayout>
 
 
@@ -280,10 +273,12 @@ God and I, bless u."
             <!--评论2-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -332,10 +327,12 @@ God and I, bless u."
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"

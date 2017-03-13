@@ -76,7 +76,7 @@ public class HeartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getActivity(),DoctorIfoActivity.class);
-                intent.putExtra("whichdoctor", "1");
+                intent.putExtra("whichdoctor", "2");
                 startActivity(intent);
             }
         });
@@ -84,11 +84,10 @@ public class HeartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getActivity(),DoctorIfoActivity.class);
-                intent.putExtra("whichdoctor", "1");
+                intent.putExtra("whichdoctor", "3");
                 startActivity(intent);
             }
         });
 
     }
-
 }

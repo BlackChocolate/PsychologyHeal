@@ -144,7 +144,9 @@
                         android:elevation="3dp"
                         android:text="@string/followChinese"
                         android:textColor="#40C4FF"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:onClick="followDoctor"
+                        android:tag="LinLiZhou"/>
 
                     <Button
                         android:id="@+id/privateChat"
@@ -204,6 +206,7 @@
             <!--精彩专栏内容1-->
             <LinearLayout
                 android:id="@+id/doc2article"
+                android:onClick="toArticle2"
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
                 android:layout_marginTop="1dp"
@@ -368,10 +371,12 @@
             <!--评论1-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -420,10 +425,12 @@
             <!--评论2-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -472,10 +479,12 @@
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"

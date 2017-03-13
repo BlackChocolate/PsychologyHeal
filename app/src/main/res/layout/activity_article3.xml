@@ -130,16 +130,18 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:gravity="center"
-                        android:paddingBottom="7dp"
-                        android:paddingTop="7dp">
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
 
                         <Button
-                            android:layout_width="60dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_border_40c4ff"
+                            android:background="@drawable/shape_corner_40c4ff_fill"
                             android:text="关注"
-                            android:textColor="#00bbd3"
-                            android:textSize="10sp" />
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp"
+                            android:onClick="followDoctor"
+                            android:tag="WuXiongBo"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -176,6 +178,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
                         android:text="“找对象不是找最好的，而是找最合适的”，这句话没毛病，可难就难在怎么知道两个人是否合适。
 \n\n我身边有不止一位朋友身上发生过同样的桥段，相恋数年，最后还是分手了，理由都是一样一样的——我们不合适。
 \n\n你看，即便一起共度几千个日夜也还是不知道枕边人原来跟自己走在两条路上，所以仅仅花时间是没用的，而是要把时间花在刀刃上，看清楚关键又核心的问题。
@@ -226,16 +230,6 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/followBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_weight="0.33"
-                    android:background="@drawable/shape_corner_40c4ff_fill"
-                    android:elevation="3dp"
-                    android:text="@string/followChinese"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="20sp" />
             </LinearLayout>
 
 
@@ -270,10 +264,12 @@
             <!--评论2-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"
@@ -322,10 +318,12 @@
             <!--评论3-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/colorWhite"
-                android:padding="8dp">
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
 
                 <com.example.sukurax.psychologyheal.XCRoundImageView
                     android:layout_width="26dp"

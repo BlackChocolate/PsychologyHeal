@@ -272,7 +272,7 @@
                     android:paddingTop="4dp">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/circle"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_weight="0.25"
@@ -282,12 +282,14 @@
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_weight="0.25"
+                        android:id="@+id/follow"
                         android:src="@drawable/guanzhu" />
 
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_weight="0.25"
+                        android:id="@+id/collect"
                         android:src="@drawable/shoucang" />
 
                     <ImageView

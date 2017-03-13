@@ -3,12 +3,12 @@ package com.example.sukurax.psychologyheal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
 import com.avos.avoscloud.AVCloudQueryResult;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -16,100 +16,62 @@ import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.CloudQueryCallback;
 import com.avos.avoscloud.FindCallback;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.EaseConstant;
 
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by sukurax on 2017/2/12.
+ * Created by sukurax on 2017/3/9.
  */
 
-public class DoctorIfoActivity extends AppCompatActivity{
-    Button orderBtn;
-    ImageView doctorIfoBackBtn;
+public class ArticleContentActivity extends AppCompatActivity {
+    ImageView articleBackBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        innerDoctorIfoActivity();
+        innerArticleActivity();
         getWidgetId();
         setClickListener();
     }
 
-    private void innerDoctorIfoActivity() {
+    private void innerArticleActivity() {
         Intent intent =getIntent();
-        String whichdoctor=intent.getStringExtra("whichdoctor");
-        switch (whichdoctor){
+        String whichlayout=intent.getStringExtra("whichlayout");
+        switch (whichlayout){
             case "1":
-                setContentView(R.layout.activity_doctorifo1);
+                setContentView(R.layout.activity_article1);
                 break;
             case "2":
-                setContentView(R.layout.activity_doctorifo2);
+                setContentView(R.layout.activity_article2);
                 break;
             case "3":
-                setContentView(R.layout.activity_doctorifo3);
+                setContentView(R.layout.activity_article3);
+                break;
+            case "4":
+                setContentView(R.layout.activity_article4);
+                break;
+            case "5":
+                setContentView(R.layout.activity_article5);
                 break;
             default:
-                setContentView(R.layout.activity_doctorifo1);
+                setContentView(R.layout.activity_article1);
                 break;
         }
+
     }
 
     private void getWidgetId() {
-        orderBtn=(Button)findViewById(R.id.orderBtn);
-        doctorIfoBackBtn=(ImageView)findViewById(R.id.doctorIfoBackBtn);
+        articleBackBtn=(ImageView)findViewById(R.id.articleBackBtn);
     }
     private void setClickListener() {
-        orderBtn.setOnClickListener(new View.OnClickListener() {
+        articleBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(DoctorIfoActivity.this,OrderActivity.class);
-                startActivity(intent);
-            }
-        });
-        doctorIfoBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DoctorIfoActivity.super.onBackPressed();
+            public void onClick(View v) {
+                ArticleContentActivity.super.onBackPressed();
             }
         });
     }
 
-    public void chatToWu(View view){
-        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
-        chat.putExtra(EaseConstant.EXTRA_USER_ID,"WuXiongBo");  //对方账号
-        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
-        startActivity(chat);
-    }
-    public void chatToLin(View view){
-        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
-        chat.putExtra(EaseConstant.EXTRA_USER_ID,"LinLiZhou");  //对方账号
-        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
-        startActivity(chat);
-    }
-    public void chatToZhao(View view){
-        Intent chat = new Intent(DoctorIfoActivity.this,ChatActivity.class);
-        chat.putExtra(EaseConstant.EXTRA_USER_ID,"ZhaoXiaoRuo");  //对方账号
-        chat.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat); //单聊模式
-        startActivity(chat);
-    }
-    public void toArticle1(View view){
-        Intent intent =new Intent(DoctorIfoActivity.this,ArticleContentActivity.class);
-        intent.putExtra("whichlayout", "1");
-        startActivity(intent);
-    }
-    public void toArticle2(View view){
-        Intent intent =new Intent(DoctorIfoActivity.this,ArticleContentActivity.class);
-        intent.putExtra("whichlayout", "2");
-        startActivity(intent);
-    }
-    public void toArticle5(View view){
-        Intent intent =new Intent(DoctorIfoActivity.this,ArticleContentActivity.class);
-        intent.putExtra("whichlayout", "5");
-        startActivity(intent);
-    }
     public void followDoctor(View view) {
         String getDocName=view.getTag().toString();
         //获取当前用户信息
@@ -227,5 +189,4 @@ public class DoctorIfoActivity extends AppCompatActivity{
                 break;
         }
     }
-
 }
